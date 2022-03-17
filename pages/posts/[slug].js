@@ -14,27 +14,26 @@ export default function Post({ post, allPosts }) {
     return <ErrorPage statusCode={404} />
   }
   return (
-    <Layout title={`PISCES | ${post.title}`} background='alt' children={
-      <>
-        <Link href="/news"><Button mt={10} pl={0} variant='ghost' leftIcon={<ArrowBackIcon />}>Back to all news</Button></Link>
-        <Text py={5} fontSize='16px' fontWeight={400} color='#CCCCCC'>{new Date(post.date).toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric' })}</Text>
-        <Text fontSize='32px' fontWeight={500}>{post.title}</Text>
-        <Text pb={8} fontSize='16px' color='#BABABA' fontWeight={500}>{post?.author?.name}</Text>
-        <div className='markdown' dangerouslySetInnerHTML={{ __html: post.content }} />
+    <Layout title={`PISCES | ${post.title}`} background='alt'>
+      <Link href="/news" passHref>
+        <Button mt={10} pl={0} variant='ghost' leftIcon={<ArrowBackIcon />}>Back to all news</Button>
+      </Link>
+      <Text py={5} fontSize='16px' fontWeight={400} color='#CCCCCC'>{new Date(post.date).toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric' })}</Text>
+      <Text fontSize='32px' fontWeight={500}>{post.title}</Text>
+      <Text pb={8} fontSize='16px' color='#BABABA' fontWeight={500}>{post?.author?.name}</Text>
+      <div className='markdown' dangerouslySetInnerHTML={{ __html: post.content }} />
 
-        <Box maxW='inherit' position='absolute' bottom='5vh'>
-          <Text fontSize='24px' pb={4}>Other Posts</Text>
-          <SimpleGrid columns={3} spacing={8} w='100%'>
-            {
-              allPosts.slice(0, 3).map((post, index) => (
-                <NewsCard key={index} post={post} />
-              ))
-            }
-          </SimpleGrid>
-        </Box>
-
-      </>
-    } />
+      <Box maxW='inherit' position='absolute' bottom='5vh'>
+        <Text fontSize='24px' pb={4}>Other Posts</Text>
+        <SimpleGrid columns={3} spacing={8} w='100%'>
+          {
+            allPosts.slice(0, 3).map((post, index) => (
+              <NewsCard key={index} post={post} />
+            ))
+          }
+        </SimpleGrid>
+      </Box>
+    </Layout>
   )
 }
 
