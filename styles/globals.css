@@ -6,3 +6,21 @@
 	font-family: "MontserratBold";
 	src: url("../lib/fonts/Montserrat-ExtraBold.ttf");
 }
+
+body::-webkit-scrollbar {
+  width: 0.8em;
+}
+ 
+body::-webkit-scrollbar-track {
+  color: none;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(166, 183, 255, 0.4);
+  border: 1px solid rgba(166, 183, 255, 0.4);
+	border-radius: 0.8em;
+}
+
+body {
+	overflow: overlay;
+}

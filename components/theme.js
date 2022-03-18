@@ -42,6 +42,12 @@ export default extendTheme({
     },
   },
   components: {
+    Container: {
+      baseStyle: {
+        maxW:'1200px',
+        paddingInline: '1em',
+      }
+    },
     Text: {
       baseStyle: {
         color: "#FFFFFF"
