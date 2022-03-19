@@ -4,7 +4,7 @@ import ErrorPage from 'next/error'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import markdownToHtml from '../../lib/markdownToHtml'
 import Layout from '../../components/Layout'
-import { Button, SimpleGrid, Box, Text, VStack } from '@chakra-ui/react'
+import { Button, SimpleGrid, Box, Text, VStack, Heading } from '@chakra-ui/react'
 import { ArrowBackIcon } from '@chakra-ui/icons'
 import Link from 'next/link';
 import NewsCard from '../../components/NewsCard'
@@ -27,13 +27,13 @@ export default function Post({ post, allPosts }) {
         <Button mt={10} pl={0} variant='ghost' leftIcon={<ArrowBackIcon />}>Back to all news</Button>
       </Link>
       <Text py={5} fontSize='16px' fontWeight={400} color='#CCCCCC'>{new Date(post.date).toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric' })}</Text>
-      <Text fontSize='2em' fontWeight={500}>{post.title}</Text>
+      <Heading mt='' size='lg'>{post.title}</Heading>
       <Text pb={8} fontSize='16px' color='#BABABA' fontWeight={500}>{post?.author?.name}</Text>
       <Box pb={isMobile ? '2em' : '30vh'} className='markdown' dangerouslySetInnerHTML={{ __html: post.content }} />
 
       {isMobile ?
         <VStack spacing={6} pt={20} pb={5}>
-          <Text fontSize='24px'>Other Posts</Text>
+          <Heading size='md'>Other Posts</Heading>
           {
             allPosts.filter(element => element.slug !== post.slug).slice(0, 3).map((nextPost, index) => (
               <NewsCard key={index} post={nextPost} />

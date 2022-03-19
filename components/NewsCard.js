@@ -12,7 +12,7 @@ function NewsCard({ post, type = "home" }) {
   if (type === 'home') {
     return (
       <Link href={`/posts/${encodeURIComponent(post.slug)}`}>
-        <Box _hover={{ bg: 'rgba(166, 183, 255, 0.4)', cursor: 'pointer' }} bg='rgba(65, 72, 85, 0.65)' borderRadius={8} boxShadow='0px 8px 10px rgba(0, 0, 0, 0.07), 0px 3px 14px rgba(0, 0, 0, 0.06), 0px 4px 5px rgba(0, 0, 0, 0.1)'>
+        <Box _hover={{ bg: 'rgba(166, 183, 255, 0.4)', cursor: 'pointer' }} w='100%' bg='rgba(65, 72, 85, 0.65)' borderRadius={8} boxShadow='0px 8px 10px rgba(0, 0, 0, 0.07), 0px 3px 14px rgba(0, 0, 0, 0.06), 0px 4px 5px rgba(0, 0, 0, 0.1)'>
           <VStack p={5} textAlign='left' spacing={3}>
             <HStack w='100%'>
               <Text color='#BABABA' fontSize={12} fontWeight={700}>NEWS</Text>

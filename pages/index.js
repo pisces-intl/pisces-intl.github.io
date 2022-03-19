@@ -5,6 +5,7 @@ import {
   Heading,
   Button,
   VStack,
+  Text
 } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
@@ -16,14 +17,14 @@ export default function Index({ allPosts }) {
   const [isMobile, setIsMobile] = React.useState(false)
 
   React.useEffect(() => {
-    setIsMobile(Boolean(window.innerWidth < 890))
+    setIsMobile((window.innerWidth < 890) || (window.innerHeight < 910))
   }, [])
 
   return (
     <Layout title='PISCES'>
       <Box pt={20} textAlign={isMobile ? 'center' : ''}>
         <Heading fontSize={isMobile ? '1.2em' : '2em'} fontWeight={500}>Public Infrastructure Security Cyber Education System</Heading>
-        <Heading fontSize={isMobile ? '2em' : '4em'} fontFamily='MontserratBold' lineHeight={isMobile ? '1.1em' : '1.5em'} pt={10} maxW='920px'>Infrastructure protection, workforce development, and research.</Heading>
+        <Text fontSize={isMobile ? '2em' : '4em'} fontFamily='MontserratBold' lineHeight={isMobile ? '1.1em' : '1.5em'} pt={10} maxW={isMobile ? '' : '920px'}>Infrastructure protection, workforce development, and research.</Text>
         <Link href="/about/pisces" passHref>
           {isMobile ? <Button rightIcon={<ArrowForwardIcon />} mt={10} fontSize='1em'>Learn More</Button> : <Button rightIcon={<ArrowForwardIcon />} mt={10} p={6} fontSize='1.3em'>Learn More About Our Program</Button>}
         </Link>

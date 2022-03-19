@@ -1,4 +1,4 @@
-import { Input, Text, VStack } from '@chakra-ui/react';
+import { Input, Heading, VStack } from '@chakra-ui/react';
 import React from 'react';
 import Layout from '../components/Layout';
 import NewsCard from '../components/NewsCard';
@@ -10,9 +10,8 @@ export default function News({ allPosts }) {
 
   return (
     <Layout title='PISCES | News' background='alt'>
-      <Text fontSize='2em' mt='1.5em'>News</Text>
+      <Heading size="lg">News</Heading>
       <Input
-        mt='1em'
         mb='2em'
         color='#BABABA'
         border='1px solid #BABABA'

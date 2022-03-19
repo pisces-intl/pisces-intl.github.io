@@ -2,10 +2,11 @@ import { extendTheme } from "@chakra-ui/react"
 
 export default extendTheme({
   colors: {
+    grey: "#BABABA",
     brand: {
       100: "#C2FCFF",
-      200: "#C2FCFF",
-      300: "#C2FCFF",
+      200: "#BABABA",
+      300: "FFFFFF",
       400: "#C2FCFF",
       500: "#C2FCFF",
       600: "#C2FCFF",
@@ -44,13 +45,42 @@ export default extendTheme({
   components: {
     Container: {
       baseStyle: {
-        maxW:'1200px',
+        maxW: '1200px',
         paddingInline: '1em',
       }
     },
     Text: {
       baseStyle: {
         color: "#FFFFFF"
+      },
+      variants: {
+        content: {
+          color: '#BABABA',
+          fontSize: '1em',
+          fontWeight: 400,
+        }
+      }
+    },
+    Heading: {
+      baseStyle: {
+        fontSize: '2em',
+        mt: '1.5em',
+        mb: '0.5em',
+        fontWeight: 500
+      },
+      sizes: {
+        md: {
+          fontSize: '1.5em',
+          mt: '1em',
+          mb: '1em',
+          fontWeight: 500
+        },
+        lg: {
+          fontSize: '2.05em',
+          mt: '1.5em',
+          mb: '0.6em',
+          fontWeight: 500
+        }
       }
     },
     Link: {
