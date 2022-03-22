@@ -1,9 +1,10 @@
 import React from 'react';
-import Layout from '../../components/Layout';
+import { data } from '../../academic-data'
+import Faq from '../../components/faq';
 
 export default function Academic() {
+
   return (
-    <Layout title='PISCES | Academic'>
-    </Layout>
+    <Faq title='Academic' data={data} />
   );
 }

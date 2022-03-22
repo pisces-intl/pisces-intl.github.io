@@ -28,17 +28,6 @@ export default extendTheme({
     global: {
       body: {
         bg: 'none'
-      },
-      div: {
-        p: {
-          fontWeight: 500,
-          fontSize: '20px',
-          lineHeight: '150%',
-          color: '#BABABA'
-        },
-        a: {
-          color: '#C2FCFF'
-        }
       }
     },
   },
@@ -84,10 +73,10 @@ export default extendTheme({
       }
     },
     Link: {
-      variants: {
-        solid: {
-          color: "#C2FCFF"
-        }
+      baseStyle: {
+        fontSize: '1em',
+        fontWeight: 500,
+        color: "#C2FCFF"
       }
     },
     Button: {

@@ -2,12 +2,12 @@ import React from 'react';
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
-import markdownToHtml from '../../lib/markdownToHtml'
 import Layout from '../../components/Layout'
 import { Button, SimpleGrid, Box, Text, VStack, Heading } from '@chakra-ui/react'
 import { ArrowBackIcon } from '@chakra-ui/icons'
 import Link from 'next/link';
 import NewsCard from '../../components/NewsCard'
+import ReactMarkdown from 'react-markdown';
 
 export default function Post({ post, allPosts }) {
   const [isMobile, setIsMobile] = React.useState(false)
@@ -29,7 +29,9 @@ export default function Post({ post, allPosts }) {
       <Text py={5} fontSize='16px' fontWeight={400} color='#CCCCCC'>{new Date(post.date).toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric' })}</Text>
       <Heading mt='' size='lg'>{post.title}</Heading>
       <Text pb={8} fontSize='16px' color='#BABABA' fontWeight={500}>{post?.author?.name}</Text>
-      <Box pb={isMobile ? '2em' : '30vh'} className='markdown' dangerouslySetInnerHTML={{ __html: post.content }} />
+      <Box pb={isMobile ? '2em' : '30vh'}>
+        <ReactMarkdown className='markdown'>{post.content}</ReactMarkdown>
+      </Box>
 
       {isMobile ?
         <VStack spacing={6} pt={20} pb={5}>
@@ -75,14 +77,12 @@ export async function getStaticProps({ params }) {
     'ogImage',
     'coverImage',
   ])
-  const content = await markdownToHtml(post.content || '')
 
   return {
     props: {
       allPosts,
       post: {
-        ...post,
-        content,
+        ...post
       },
     },
   }

@@ -20,7 +20,7 @@ export default function Donate() {
       </Link>
       <Text variant='content'>You can shop on Amazon Smile with the below URL to share a percentage of the purchase with us.</Text>
       <Link href="https://smile.amazon.com/ch/84-2548117" passHref>
-        <Button size='lg' mt='1em' variant='outline' rightIcon={<ExternalLinkIcon />}>Amazon Smile</Button>
+        <Button size='lg' my='1em' variant='outline' rightIcon={<ExternalLinkIcon />}>Amazon Smile</Button>
       </Link>
     </Layout>
   );

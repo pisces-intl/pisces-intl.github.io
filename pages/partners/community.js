@@ -1,9 +1,10 @@
 import React from 'react';
-import Layout from '../../components/Layout';
+import { data } from '../../community-data'
+import Faq from '../../components/faq';
 
 export default function Community() {
+
   return (
-    <Layout title='PISCES | Community'>
-    </Layout>
+    <Faq title='Community' data={data} />
   );
 }

@@ -1,9 +1,10 @@
 import React from 'react';
-import Layout from '../../components/Layout';
+import { data } from '../../pisces-data'
+import Faq from '../../components/faq';
 
 export default function Pisces() {
+
   return (
-    <Layout title='PISCES | About'>
-    </Layout>
+    <Faq title='About' data={data} />
   );
 }

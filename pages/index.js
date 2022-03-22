@@ -22,7 +22,7 @@ export default function Index({ allPosts }) {
 
   return (
     <Layout title='PISCES'>
-      <Box pt={20} textAlign={isMobile ? 'center' : ''}>
+      <Box textAlign={isMobile ? 'center' : ''}>
         <Heading fontSize={isMobile ? '1.2em' : '2em'} fontWeight={500}>Public Infrastructure Security Cyber Education System</Heading>
         <Text fontSize={isMobile ? '2em' : '4em'} fontFamily='MontserratBold' lineHeight={isMobile ? '1.1em' : '1.5em'} pt={10} maxW={isMobile ? '' : '920px'}>Infrastructure protection, workforce development, and research.</Text>
         <Link href="/about/pisces" passHref>

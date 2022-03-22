@@ -7,20 +7,51 @@
 	src: url("../lib/fonts/Montserrat-ExtraBold.ttf");
 }
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar{
   width: 0.8em;
 }
+
+.table-of-contents::-webkit-scrollbar {
+  width: 0.4em;
+}
  
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track, .table-of-contents::-webkit-scrollbar-track {
   color: none;
 }
  
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb, .table-of-contents::-webkit-scrollbar-thumb {
   background-color: rgba(166, 183, 255, 0.4);
   border: 1px solid rgba(166, 183, 255, 0.4);
 	border-radius: 0.8em;
 }
 
-body {
+body, .table-of-contents {
 	overflow: overlay;
+}
+
+/* Markdown Styles */
+
+.markdown a {
+	color: #C2FCFF;
+}
+
+.markdown a:hover {
+	text-decoration: underline;
+}
+
+.markdown p {
+	font-weight: 500;
+	font-size: 1.2em;
+	line-height: 150%;
+	color: #BABABA;
+	padding-bottom: 1em;
+}
+
+
+.markdown ul {
+	font-weight: 400;
+	font-size: 1.1em;
+	color: #BABABA;
+	padding-left: 1em;
+	list-style-type: disc;
 }
