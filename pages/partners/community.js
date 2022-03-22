@@ -1,10 +1,10 @@
 import React from 'react';
-import { data } from '../../community-data'
-import Faq from '../../components/faq';
+import { data } from '../../_data/community-data'
+import FAQ from '../../components/FAQ';
 
 export default function Community() {
 
   return (
-    <Faq title='Community' data={data} />
+    <FAQ title='Community' data={data} />
   );
 }

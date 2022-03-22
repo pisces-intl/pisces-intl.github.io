@@ -1,10 +1,10 @@
 import React from 'react';
-import { data } from '../../pisces-data'
-import Faq from '../../components/faq';
+import { data } from '../../_data/pisces-data'
+import FAQ from '../../components/FAQ';
 
 export default function Pisces() {
 
   return (
-    <Faq title='About' data={data} />
+    <FAQ title='About' data={data} />
   );
 }

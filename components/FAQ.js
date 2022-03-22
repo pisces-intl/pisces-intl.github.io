@@ -4,9 +4,8 @@ import { Link as ChakraLink } from '@chakra-ui/react'
 import Link from 'next/link';
 import Layout from './Layout';
 import ReactMarkdown from 'react-markdown'
-import { ChevronDownIcon } from '@chakra-ui/icons';
 
-export default function Faq({ title, data }) {
+export default function FAQ({ title, data }) {
   const [leftWidth, setLeftWidth] = React.useState(0)
   const [isMobile, setIsMobile] = React.useState(false)
 

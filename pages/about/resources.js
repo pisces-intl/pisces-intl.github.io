@@ -1,8 +1,8 @@
 import React from 'react';
-import { Heading, Input, SimpleGrid, Text } from '@chakra-ui/react';
+import { Heading, Input, SimpleGrid } from '@chakra-ui/react';
 import Layout from '../../components/Layout';
 import ResourceCard from '../../components/ResourceCard';
-import data from '../../resources.json'
+import { data } from '../../_data/resources-data'
 
 export default function Resources() {
   const [search, setSearch] = React.useState('');

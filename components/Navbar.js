@@ -11,6 +11,8 @@ import {
   MenuList,
   MenuItem,
   IconButton,
+  MenuGroup,
+  MenuDivider,
 } from '@chakra-ui/react';
 import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
 import Link from 'next/link';
@@ -36,11 +38,17 @@ export default function Navbar() {
         <Menu>
           <MenuButton as={IconButton} w='100%' maxW='80px' icon={<HamburgerIcon />} aria-label='Menu' />
           <MenuList>
-            <Link href="/about/pisces" passHref><MenuItem>About PISCES</MenuItem></Link>
-            <Link href="/about/board" passHref><MenuItem>Board Members</MenuItem></Link>
-            <Link href="/about/resources" passHref><MenuItem>Resources</MenuItem></Link>
-            <Link href="/partners/community" passHref><MenuItem>Community Partners</MenuItem></Link>
-            <Link href="/partners/academic" passHref><MenuItem>Academic Partners</MenuItem></Link>
+            <MenuGroup>
+              <Link href="/about/pisces" passHref><MenuItem>About PISCES</MenuItem></Link>
+              <Link href="/about/board" passHref><MenuItem>Board Members</MenuItem></Link>
+              <Link href="/about/resources" passHref><MenuItem>Resources</MenuItem></Link>
+            </MenuGroup>
+            <MenuDivider />
+            <MenuGroup>
+              <Link href="/partners/community" passHref><MenuItem>Community Partners</MenuItem></Link>
+              <Link href="/partners/academic" passHref><MenuItem>Academic Partners</MenuItem></Link>
+            </MenuGroup>
+            <MenuDivider />
             <Link href="/news" passHref><MenuItem>News</MenuItem></Link>
             <Link href="/donate" passHref><MenuItem >Donate</MenuItem></Link>
             <Link href="/contact" passHref><MenuItem>Contact us</MenuItem></Link>

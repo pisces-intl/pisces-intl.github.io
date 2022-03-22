@@ -1,10 +1,10 @@
 import React from 'react';
-import { data } from '../../academic-data'
-import Faq from '../../components/faq';
+import { data } from '../../_data/academic-data'
+import FAQ from '../../components/FAQ';
 
 export default function Academic() {
 
   return (
-    <Faq title='Academic' data={data} />
+    <FAQ title='Academic' data={data} />
   );
 }
