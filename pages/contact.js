@@ -19,7 +19,7 @@ export default function Contact() {
 
         <Heading size='lg'>Contact Us</Heading>
         <Text variant='content' mb='1em'>Interested in partnering with PISCES? Please complete the form below.</Text>
-        <Text variant='content' mb='2em'>Seeking employment? <Link href='https://www.dhs.gov/homeland-security-careers'>Try here instead</Link>. Unfortunately, PISCES can't respond to employment requests.</Text>
+        <Text variant='content' mb='2em'>Seeking employment? <Link href="https://www.dhs.gov/homeland-security-careers">Try here instead</Link>. {"Unfortunately, PISCES can't respond to employment requests."}</Text>
 
         <Text mb='0.2em'>Name <Text as='span' variant='content'>(required)</Text></Text>
         <Input
