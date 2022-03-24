@@ -12,7 +12,7 @@ export default function Board() {
 
   return (
     <Layout title='PISCES | Board' background='other'>
-      <Heading size='lg' mb='1.3em'>Board Members</Heading>
+      <Heading size='lg' mb={isMobile ? '0' : '1.3em'}>Board Members</Heading>
       {isMobile ?
         data.map((obj, index) =>
           <VStack key={index} pb='2em' spacing={4}>

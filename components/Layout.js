@@ -15,7 +15,7 @@ export default function Layout({ title, children, background = 'home' }) {
         <title>
           {title}
         </title>
-        <link rel="icon" href="/icon.png" />
+        <link rel="icon" href="/logo.png" />
       </Head>
       {background === 'home' &&
         <Box w='100vw' minH='100vh' h='100%' bgSize='cover !important' bg='url(/bg.webp) no-repeat center center fixed'>

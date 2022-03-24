@@ -26,12 +26,24 @@ export default extendTheme({
   },
   styles: {
     global: {
+      html: {
+        bgColor: 'rgba(50,54,64,1)'
+      },
       body: {
         bg: 'none'
       }
     },
   },
   components: {
+    Input: {
+      variants: {
+        contact: {
+          border: '1px solid #BABABA',
+          bgColor: '#3D434F',
+          borderRadius: '4px'
+        }
+      }
+    },
     Container: {
       baseStyle: {
         maxW: '1200px',

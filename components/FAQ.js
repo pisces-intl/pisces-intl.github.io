@@ -17,7 +17,7 @@ export default function FAQ({ title, data }) {
   return (
     <Layout title={`PISCES | ${title}`} background='other'>
       {isMobile ?
-        <Box mt='2em'>
+        <Box mt='4em'>
           <Menu>
             <MenuButton w='100%' as={Button} variant='outline' aria-label='TOC'>Table of Contents</MenuButton>
             <MenuList className='table-of-contents' bg='#373C47' minW='100vw' maxW='100vw'>
@@ -44,7 +44,7 @@ export default function FAQ({ title, data }) {
           overflow='hidden'
           maxW='inherit'
         >
-          <Box float='left' width='66%' height='100%'>
+          <Box mt='2em' float='left' width='66%' height='100%'>
             {data.map((obj, index) =>
               <Box key={index} mb='2em'>
                 <Heading id={encodeURIComponent(obj.title)} size='md' scrollMarginTop='2em'>{obj.title}</Heading>
