@@ -12,7 +12,7 @@ export default function Contact() {
     message: "",
     newsletter: true,
   }
-  
+
   const router = useRouter()
   const [state, setState] = React.useState(initialState);
   const [submitted, setSubmitted] = React.useState(false)
@@ -31,7 +31,7 @@ export default function Contact() {
         <Text variant='content' mb='1em'>Interested in partnering with PISCES? Please complete the form below.</Text>
         <Text variant='content' mb='2em'>Seeking employment? <Link target="_blank" rel="noreferrer" href="https://www.dhs.gov/homeland-security-careers">Try here instead</Link>. Unfortunately, PISCES {"can't"} respond to employment requests.</Text>
 
-        <form onSubmit={() => setSubmitted(true)} action="https://send.pageclip.co/HWQvvYzMyPeWAlq2GEjQh4LLQTCFwty8" className="pageclip-form" method="post">
+        <form target="void" onSubmit={() => setSubmitted(true)} action="https://send.pageclip.co/HWQvvYzMyPeWAlq2GEjQh4LLQTCFwty8" className="pageclip-form" method="post">
 
           <Text mb='0.2em'>Name <Text as='span' variant='content'>(required)</Text></Text>
           <Input
