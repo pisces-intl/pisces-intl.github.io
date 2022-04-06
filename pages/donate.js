@@ -1,5 +1,5 @@
 import { ExternalLinkIcon } from '@chakra-ui/icons';
-import { Button, Heading, Text } from '@chakra-ui/react';
+import { Button, Heading, Image, Text } from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
 import Layout from '../components/Layout';
@@ -16,11 +16,11 @@ export default function Donate() {
       <Heading size='md'>Make a tax-deductible donation to PISCES</Heading>
       <Text variant='content'>For large or recurring donations please email info@pisces-intl.org</Text>
       <Link href="https://www.paypal.com/donate?business=VTZ5DAMVPJ42S&item_name=Donate+to+PISCES&currency_code=USD" passHref>
-        <Button size='lg' mt='1em' mb='2em' variant='outline' rightIcon={<ExternalLinkIcon />}>Donate with PayPal</Button>
+        <Button size='lg' mt='1em' mb='2em' rightIcon={<ExternalLinkIcon />}><Image alt='Donate with Paypal' w='6em' src='/paypal.webp' /></Button>
       </Link>
       <Text variant='content'>You can shop on Amazon Smile with the below URL to share a percentage of the purchase with us.</Text>
       <Link href="https://smile.amazon.com/ch/84-2548117" passHref>
-        <Button size='lg' my='1em' variant='outline' rightIcon={<ExternalLinkIcon />}>Amazon Smile</Button>
+        <Button size='lg' mt='1em' mb='5em' rightIcon={<ExternalLinkIcon />}><Image alt='Amazon Smile' w='6em' src='/amazon.webp' /></Button>
       </Link>
     </Layout>
   );

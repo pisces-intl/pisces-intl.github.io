@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head'
+import Script from 'next/script';
 import {
   ChakraProvider,
   Box,
@@ -17,6 +18,7 @@ export default function Layout({ title, children, background = 'home' }) {
         </title>
         <link rel="icon" href="/logo.png" />
       </Head>
+      <Script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8" />
       {background === 'home' &&
         <Box w='100vw' minH='100vh' h='100%' bgSize='cover !important' bg='url(/bg.webp) no-repeat center center fixed'>
           <Box w='100%' minH='100vh' h='100%' bg='linear-gradient(to bottom, rgba(51, 51, 51, 0.65), rgba(51, 51, 51, 0.85))'>

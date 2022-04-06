@@ -46,8 +46,8 @@ export default function FAQ({ title, data }) {
         >
           <Box mt='2em' float='left' width='66%' height='100%'>
             {data.map((obj, index) =>
-              <Box key={index} mb='2em'>
-                <Heading id={encodeURIComponent(obj.title)} size='md' scrollMarginTop='2em'>{obj.title}</Heading>
+              <Box key={index} mb='4em'>
+                <Heading id={encodeURIComponent(obj.title)} mb='0.5em' size='md' scrollMarginTop='2em'>{obj.title}</Heading>
                 <ReactMarkdown className='markdown'>{obj.text}</ReactMarkdown>
               </Box>
             )}
