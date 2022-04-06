@@ -1,18 +1,27 @@
-import { Button, Heading, Input, Link, Text, Textarea, Container, Checkbox, HStack } from '@chakra-ui/react';
+import { Button, Heading, Input, Link, Text, Textarea, Container, Checkbox, HStack, Modal, ModalOverlay, ModalHeader, ModalContent, ModalBody, ModalCloseButton, ModalFooter } from '@chakra-ui/react';
 import React from 'react';
 import Layout from '../components/Layout';
+import { useRouter } from 'next/router';
 
 export default function Contact() {
-  const [state, setState] = React.useState({
+  const initialState = {
     name: "",
     email: "",
     phone: "",
     org: "",
     message: "",
     newsletter: true,
-  });
+  }
+  
+  const router = useRouter()
+  const [state, setState] = React.useState(initialState);
+  const [submitted, setSubmitted] = React.useState(false)
 
   const handleChange = (event) => setState({ ...state, [event.target.name]: event.target.value })
+  const onClose = (e) => {
+    setState(initialState)
+    setSubmitted(false);
+  }
 
   return (
     <Layout title='PISCES | Contact' background='other'>
@@ -20,9 +29,9 @@ export default function Contact() {
 
         <Heading size='lg'>Contact Us</Heading>
         <Text variant='content' mb='1em'>Interested in partnering with PISCES? Please complete the form below.</Text>
-        <Text variant='content' mb='2em'>Seeking employment? <Link href="https://www.dhs.gov/homeland-security-careers">Try here instead</Link>. {"Unfortunately, PISCES can't respond to employment requests."}</Text>
+        <Text variant='content' mb='2em'>Seeking employment? <Link target="_blank" rel="noreferrer" href="https://www.dhs.gov/homeland-security-careers">Try here instead</Link>. Unfortunately, PISCES {"can't"} respond to employment requests.</Text>
 
-        <form action="https://send.pageclip.co/HWQvvYzMyPeWAlq2GEjQh4LLQTCFwty8" className="pageclip-form" method="post">
+        <form onSubmit={() => setSubmitted(true)} action="https://send.pageclip.co/HWQvvYzMyPeWAlq2GEjQh4LLQTCFwty8" className="pageclip-form" method="post">
 
           <Text mb='0.2em'>Name <Text as='span' variant='content'>(required)</Text></Text>
           <Input
@@ -89,9 +98,21 @@ export default function Contact() {
             <Text>Subscribe to Newsletter</Text>
           </HStack>
 
-          <Button size='lg' className="pageclip-form__submit" type="submit">Submit</Button>
+          <Button mb='2em' size='lg' className="pageclip-form__submit" type="submit">Submit</Button>
 
         </form>
+
+        <Modal isCentered isOpen={submitted} onClose={onClose}>
+          <ModalOverlay />
+          <ModalContent >
+            <ModalCloseButton />
+            <ModalHeader>Thanks!</ModalHeader>
+            <ModalBody>Someone from PISCES will reach out soon.</ModalBody>
+            <ModalFooter>
+              <Button onClick={() => router.push('/')}>Go home</Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
 
       </Container>
     </Layout>

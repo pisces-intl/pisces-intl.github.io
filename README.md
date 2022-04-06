@@ -2,7 +2,7 @@
 > Next.js web app for PISCES
 
 ## Adding a Blog Post
-1. Go to [https://github.com/pisces-intl/pisces-intl.github.io](https://github.dev/pisces-intl/pisces-intl.github.io)
+1. Go to [https://github.dev/pisces-intl/pisces-intl.github.io](https://github.dev/pisces-intl/pisces-intl.github.io)
 2. Sign in with your GitHub credentials
 3. Open the `_posts` folder
 4. Either copy & paste an existing `.md` file, or create a new file ending in `.md`
@@ -29,7 +29,7 @@ ogImage:
 13. The changes will be committed directly to the `main` branch, which will be automatically deployed within a few minutes
 
 ## Adding a Resource Link
-1. Go to [https://github.com/pisces-intl/pisces-intl.github.io](https://github.dev/pisces-intl/pisces-intl.github.io)
+1. Go to [https://github.dev/pisces-intl/pisces-intl.github.io](https://github.dev/pisces-intl/pisces-intl.github.io)
 2. Sign in with your GitHub credentials
 3. Open the `_data/resources-data.js` file
 4. Under the `links` array, copy lines 3 - 7
@@ -43,7 +43,7 @@ ogImage:
 12. The changes will be committed directly to the `main` branch, which will be automatically deployed within a few minutes
 
 ## Adding a Resource Document
-1. Go to [https://github.com/pisces-intl/pisces-intl.github.io](https://github.dev/pisces-intl/pisces-intl.github.io)
+1. Go to [https://github.dev/pisces-intl/pisces-intl.github.io](https://github.dev/pisces-intl/pisces-intl.github.io)
 2. Sign in with your GitHub credentials
 3. Navigate to the `public/assets/documents` folder
 4. Add another document by right-clicking and selecting **"Upload"**

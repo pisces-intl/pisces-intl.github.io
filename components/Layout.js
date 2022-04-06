@@ -17,6 +17,8 @@ export default function Layout({ title, children, background = 'home' }) {
           {title}
         </title>
         <link rel="icon" href="/logo.png" />
+        <link rel="preload" as='image' href="/bg-alt.webp" />
+        <link rel="preload" as='image' href="/bg.webp" />
       </Head>
       <Script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8" />
       {background === 'home' &&
