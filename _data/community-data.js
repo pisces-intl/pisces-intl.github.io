@@ -5,7 +5,7 @@ export const data = [
   },
   {
     title: `Do I need to buy anything?`,
-    text: `One computer is required to act as the collection device; the estimated cost is approximately $1000.`
+    text: `No, the collector hardware is provided at no cost.`
   },
   {
     title: `Are there infrastructure requirements?`,
