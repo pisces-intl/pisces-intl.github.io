@@ -60,3 +60,52 @@ ogImage:
 15. In the top box (**"Message"**) type a commit message (something like *"Added CISA document"*)
 16. Above the top box, click the "✓" (**"Commit"**) button
 17. The changes will be committed directly to the `main` branch, which will be automatically deployed within a few minutes
+
+## Changing Board Member Data
+1. Go to [https://github.dev/pisces-intl/pisces-intl.github.io](https://github.dev/pisces-intl/pisces-intl.github.io)
+2. Sign in with your GitHub credentials
+3. Open the `_data/board-data.js` file
+4. Edit any of the **name**, **description**, or **url** fields (*Note: if you add a new board member, upload the photo to the `public/assets/board-members/` folder then reference it within the **url** field*).
+5. Save the file
+6. On the left-hand panel, click the **"Source Control"** tab (*Ctrl+Shift+G*)
+7. Next to the `_data/board-data.js` you just edited, click the "+" button. It should now show up under **"Staged Changes"**.
+8. If you added any photos, next the photo file you just added, click the "+" button. It should now show up under **"Staged Changes"**.
+9. In the top box (**"Message"**) type a commit message (something like *"Changed Board Members"*)
+10. Above the top box, click the "✓" (**"Commit"**) button
+11. The changes will be committed directly to the `main` branch, which will be automatically deployed within a few minutes
+
+## Changing Academic Data
+1. Go to [https://github.dev/pisces-intl/pisces-intl.github.io](https://github.dev/pisces-intl/pisces-intl.github.io)
+2. Sign in with your GitHub credentials
+3. Open the `_data/academic-data.js` file
+4. Edit any of the **title**, **text** fields
+5. Save the file
+6. On the left-hand panel, click the **"Source Control"** tab (*Ctrl+Shift+G*)
+7. Next to the `_data/academic-data.js` you just edited, click the "+" button. It should now show up under **"Staged Changes"**.
+8. In the top box (**"Message"**) type a commit message (something like *"Changed Academic Data"*)
+9.  Above the top box, click the "✓" (**"Commit"**) button
+10. The changes will be committed directly to the `main` branch, which will be automatically deployed within a few minutes
+
+## Changing Community Data
+1. Go to [https://github.dev/pisces-intl/pisces-intl.github.io](https://github.dev/pisces-intl/pisces-intl.github.io)
+2. Sign in with your GitHub credentials
+3. Open the `_data/community-data.js` file
+4. Edit any of the **title**, **text** fields
+5. Save the file
+6. On the left-hand panel, click the **"Source Control"** tab (*Ctrl+Shift+G*)
+7. Next to the `_data/community-data.js` you just edited, click the "+" button. It should now show up under **"Staged Changes"**.
+8. In the top box (**"Message"**) type a commit message (something like *"Changed Community Data"*)
+9.  Above the top box, click the "✓" (**"Commit"**) button
+10. The changes will be committed directly to the `main` branch, which will be automatically deployed within a few minutes
+
+## Changing PISCES Data
+1. Go to [https://github.dev/pisces-intl/pisces-intl.github.io](https://github.dev/pisces-intl/pisces-intl.github.io)
+2. Sign in with your GitHub credentials
+3. Open the `_data/pisces-data.js` file
+4. Edit any of the **title**, **text** fields
+5. Save the file
+6. On the left-hand panel, click the **"Source Control"** tab (*Ctrl+Shift+G*)
+7. Next to the `_data/pisces-data.js` you just edited, click the "+" button. It should now show up under **"Staged Changes"**.
+8. In the top box (**"Message"**) type a commit message (something like *"Changed PISCES Data"*)
+9.  Above the top box, click the "✓" (**"Commit"**) button
+10. The changes will be committed directly to the `main` branch, which will be automatically deployed within a few minutes
