@@ -8,6 +8,7 @@ import { ArrowBackIcon } from '@chakra-ui/icons'
 import Link from 'next/link';
 import NewsCard from '../../components/NewsCard'
 import ReactMarkdown from 'react-markdown';
+import ReactPlayer from 'react-player/lazy'
 
 export default function Post({ post, allPosts }) {
   const [isMobile, setIsMobile] = React.useState(false)
@@ -31,6 +32,7 @@ export default function Post({ post, allPosts }) {
       <Text pb={8} fontSize='16px' color='#BABABA' fontWeight={500}>{post?.author?.name}</Text>
       <Box pb={isMobile ? '2em' : '30vh'}>
         <ReactMarkdown className='markdown'>{post.content}</ReactMarkdown>
+        {post?.video && <ReactPlayer controls width='100%' url={post.video} />}
       </Box>
 
       {isMobile ?
@@ -76,6 +78,7 @@ export async function getStaticProps({ params }) {
     'content',
     'ogImage',
     'coverImage',
+    'video',
   ])
 
   return {
