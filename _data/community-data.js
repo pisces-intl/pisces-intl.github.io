@@ -1,7 +1,7 @@
 export const data = [
   {
     title: `How does the service work?`,
-    text: `A collection device is activated on the customer network. This device has an embedded Intrusion Detection System (IDS) that creates security alerts and traffic metadata (packet headers: source and destination addresses, port, protocol, time stamp).`
+    text: `A collection device is activated on the customer network. This device has an embedded intrusion detection system that creates security alerts and traffic metadata (packet headers: source and destination addresses, port, protocol, time stamp).`
   },
   {
     title: `Do I need to buy anything?`,
@@ -9,7 +9,7 @@ export const data = [
   },
   {
     title: `Are there infrastructure requirements?`,
-    text: `Yes, customers must have infrastructure—specifically an edge switch or router—that allows port mirroring or “spanning.” This process is copying all traffic on the device’s ports and concentrating it on a single monitoring port. The collector plugs into the span port. Ideally, rack space will be provided and, during provisioning, certain information must be collected regarding internal addressing, wire speed, and details of the internet connection.`
+    text: `Yes, customers must have infrastructure—specifically an edge switch or router—that allows port mirroring or “spanning.” This process is copying all traffic on the device's ports and concentrating it on a single monitoring port. The collector plugs into the span port. Ideally, rack space will be provided and, during provisioning, certain information must be collected regarding internal addressing, wire speed, and details of the internet connection.`
   },
   {
     title: `How much work is involved in setting up the monitoring solution?`,
@@ -17,11 +17,11 @@ export const data = [
   },
   {
     title: `What type of data is pulled from the network for analysis?`,
-    text: `IDS alerts (very similar to anti-virus alerts) and packet headers – metadata. No content (e-mail, web pages, financial transactions) is accessed. A brief summary is provided: source address, destination address, port, protocol, flags, time stamp, and directionality information (inbound versus outbound traffic).`
+    text: `Intrusion detection system alerts (very similar to anti-virus alerts) and packet headers (metadata). No content (e-mail, web pages, financial transactions) is accessed. A brief summary is provided that includes source address, destination address, port, protocol, flags, time stamp, and directionality information (inbound versus outbound traffic).`
   },
   {
     title: `What types of things do the analysts find?`,
-    text: `Malware delivered to organizational assets that may have evaded preventive controls is the target of the analyst investigations. Suspicious behavior such as internal network scanning, cryptocurrency mining, organized crime command and control communications, all designed to indentify compromised assets on the network.`
+    text: `Malware delivered to organizational assets that may have evaded preventive controls is the target of the analyst investigations. Suspicious behavior such as internal network scanning, cryptocurrency mining, organized crime command and control communications, all designed to identify compromised assets on the network.`
   },
   {
     title: `How are security incidents reported?`,
@@ -37,7 +37,7 @@ export const data = [
   },
   {
     title: `Do students go through a background check?`,
-    text: `Students are required to sign a non-disclosure agreement, but no background check is required. Because students are handling metadata that are likely subject to public disclosure, there is negligible risk to personally identifiable or regulated information. In addition, the collectors are one way so data can only flow to the cyber range for analysis. Students cannot reach back to the community sharing data.`
+    text: `Students are required to sign a non-disclosure agreement, but no background check is required. Because students are handling metadata likely subject to public disclosure, there is negligible risk to personally identifiable or regulated information. In addition, the collectors are one-way so data can only flow to the Cyber Range for analysis. Students cannot reach back to the community sharing data.`
   },
   {
     title: `Are international students involved?`,
@@ -45,7 +45,7 @@ export const data = [
   },
   {
     title: `How secure is the data pulled from customer networks?`,
-    text: `Metadata and IDS alerts are stored for approximately 90 days, if necessary for forensic purposes. Data are stored at a participating university, and the data center must maintain security standards for physical security of the facility, network-level access control, time-limited access authorization for students, and data center security monitoring.`
+    text: `Metadata and intrusion detection system alerts are stored for approximately 90 days, if necessary for forensic purposes. Data are stored at a participating university, and the data center must maintain security standards for physical security of the facility, network-level access control, time-limited access authorization for students, and data center security monitoring.`
   },
   {
     title: `How long will my jurisdiction receive this service?`,
@@ -61,14 +61,14 @@ export const data = [
   },
   {
     title: `How long is my data retained?`,
-    text: `IDS alerts and metadata are retained for approximately 90 days, in the event they are needed for forensic examination.`
+    text: `Intrusion detection system alerts and metadata are retained for approximately 90 days, in the event they are needed for forensic examination.`
   },
   {
-    title: `By sharing access to multiple students and universities, how can these partnerships ensure security of information?`,
-    text: `Students will not have access to sensitive information and students will be working with header data. Additionally, students will primarily work on university-secured computers or with computers that meet university-secured and PISCES-secured requirements. Students are provided waivers to ensure they will, to the best of their ability, maintain data confidentiality. The non-release of information also typically falls under university ethics policies and subjects students to university review if not adhered. The university policies can be provided to municipalities for full transparency.`
+    title: `By sharing access to multiple students and universities, how can these partnerships maintain security of information?`,
+    text: `Students will not have access to sensitive information and students will be working with header data. Additionally, students will primarily work on university-secured computers or with computers that meet university-secured and PISCES-secured requirements. Students are provided waivers to commit they will, to the best of their ability, maintain data confidentiality. The non-release of information also typically falls under university ethics policies and subjects students to university review if not adhered. The university policies can be provided to municipalities for full transparency.`
   },
   {
-    title: `How do we ensure accuracy of student results?`,
+    title: `How do we maintain accuracy of student results?`,
     text: `Several lines of checks to accuracy from students. Students are trained to detect anomalies in header data. Upon detecting something anomalous, they verify that this is, in fact, a credible threat. Upon determining a credible threat is present, students report to the professor who is a trained professional in the field. The professor reviews the report and makes a determination, based on this evaluation, to pass this information along to the municipality.`
   },
   {
