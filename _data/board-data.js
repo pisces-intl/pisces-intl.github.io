@@ -17,12 +17,12 @@ export const data = [
   {
     name: `Erik Fretheim`,
     description: `Erik Fretheim is the Director of Cybersecurity Programs at Western Washington University. Before coming to Western Washington University, Erik was a Professor at City University of Seattle and the United States Military Academy. He retired from the Army in 2010 after 33 years of service (active and reserve) and also was an engineer, consultant and Chief Information/Technology Officer for several companies and has been involved with the internet since its early days. Erik has a PhD in Electrical Engineering from the Air Force Institute of Technology. He is a Senior Member of the Institute of Electrical and Electronic Engineers.`,
-    url: ``
+    url: `/assets/board-members/erik-fretheim.jpg`
   },
   {
     name: `Brandon Hardenbrook`,
     description: `Brandon Hardenbrook serves as Chief Operating Officer of the Pacific NorthWest Economic Region (PNWER), a statutory public-private partnership chartered by the states of WA, OR, ID, MT, AK, and the Canadian provinces of BC, AB, SK, YT, and NWT. Brandon oversees all PNWER operations and working groups, including the Center for Regional Disaster Resilience. Prior to PNWER, Brandon served as an Army Air Defense Officer where he worked on the development and deployment of a new missile defense system.`,
-    url: ``
+    url: `/assets/board-members/brandon-hardenbrook.jpg`
   },
   {
     name: `Michael Tsikerdekis`,
