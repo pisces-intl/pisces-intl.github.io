@@ -25,6 +25,11 @@ export const data = [
     url: `/assets/board-members/brandon-hardenbrook.jpg`
   },
   {
+    name: `Matt Boehnke`,
+    description: `Matt is currently the Program Director for the Cyber Security Division and Assistant Professor in Computer Science at Columbia Basin College (CBC) in Pasco, WA. Matt was raised in Kennewick, graduating from Kamiakin High School in 1986. He then attended Eastern Washington University, where he graduated as an ROTC-Distinguished Military Graduate and received his active-duty commission in the U.S. Army Aviation branch in 1990. He spent the next 21 years in the service, rising to the rank of Lieutenant Colonel before retiring and moving back to Kennewick. Since 2015, Matt has served as the director and lead professor of the cybersecurity division at Columbia Basin College. He also owns a cybersecurity consulting business. Before joining the Legislature, he served for three years on the Kennewick City Council. In the House, Matt is serving on three committees, including in a leadership role as the ranking minority member of the Community and Economic Development Committee. He is also a member of the House Appropriations and Environment and Energy committees.`,
+    url: `/assets/board-members/matt-boehnke.jpg`
+  },
+  {
     name: `Michael Tsikerdekis`,
     description: `Michael Tsikerdekis is an assistant professor in the Computer Science Department at Western Washington University. His research interests include deception, data mining, cybersecurity, and social computing. Michael has a PhD in Informatics from Masaryk University. He is a senior member of the Institute of Electrical and Electronics Engineers.`,
     url: `/assets/board-members/michael-tsikerekis.jpg`
