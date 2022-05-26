@@ -5,7 +5,7 @@
 1. Go to [https://github.dev/pisces-intl/pisces-intl.github.io](https://github.dev/pisces-intl/pisces-intl.github.io)
 2. Sign in with your GitHub credentials
 3. Open the `_posts` folder
-4. Either copy & paste an existing `.md` file, or create a new file ending in `.md`
+4. Right-click and Create a new file ending in `.md` give it a proper date formatted name
 5. At the top of the file, insert the following text:
 ```
 ---
@@ -20,15 +20,15 @@ ogImage:
 video: ''
 ---
 ```
-6. Fill out the fields relevant to the post (the `coverImage`, `ogImage` and `video` fields can be ommitted)
-7. Write the blogpost using [markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-8. If the blogpost includes an embedded video, put the URL in the `video` field.
-9. Save the file
-10. On the left-hand panel, click the **"Source Control"** tab (*Ctrl+Shift+G*)
-11. Next to the _post file you just created, click the "+" button. It should now show up under **"Staged Changes"**.
-12. In the top box (**"Message"**) type a commit message (something like *"Added 123.md"*)
-13. Above the top box, click the "✓" (**"Commit"**) button
-14. The changes will be committed directly to the `main` branch, which will be automatically deployed within a few minutes
+1. Fill out the fields relevant to the post (the `coverImage`, `ogImage` and `video` fields can be ommitted)
+2. Write the blogpost using [markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+3. If the blogpost includes an embedded video, put the URL to the video in the `video` field.
+4. Save the file (*Ctrl + S*) 
+5.  On the left-hand panel, click the **"Source Control"** tab (*Ctrl+Shift+G*)
+6.  Next to the _post file you just created, click the "+" button. It should now show up under **"Staged Changes"**.
+7.  In the top box (**"Message"**) type a commit message (something like *"Added 123.md"*)
+8.  Above the top box, click the "✓" (**"Commit"**) button
+9.  The changes will be committed directly to the `main` branch, which will be automatically deployed within a few minutes
 
 ## Adding a Resource Link
 1. Go to [https://github.dev/pisces-intl/pisces-intl.github.io](https://github.dev/pisces-intl/pisces-intl.github.io)

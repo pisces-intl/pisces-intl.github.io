@@ -45,8 +45,8 @@ export default function Navbar() {
             </MenuGroup>
             <MenuDivider />
             <MenuGroup>
-              <Link href="/partners/community" passHref><MenuItem>Community Partners</MenuItem></Link>
-              <Link href="/partners/academic" passHref><MenuItem>Academic Partners</MenuItem></Link>
+              <Link href="/partners/community" passHref><MenuItem>Community Partners FAQ</MenuItem></Link>
+              <Link href="/partners/academic" passHref><MenuItem>Academic Partners FAQ</MenuItem></Link>
             </MenuGroup>
             <MenuDivider />
             <Link href="/news" passHref><MenuItem>News</MenuItem></Link>
@@ -78,8 +78,8 @@ export default function Navbar() {
           <Menu>
             <MenuButton as={Button} variant='ghost' rightIcon={<ChevronDownIcon />}>Our Partners</MenuButton>
             <MenuList>
-              <Link href="/partners/community" passHref><MenuItem>Community Partners</MenuItem></Link>
-              <Link href="/partners/academic" passHref><MenuItem>Academic Partners</MenuItem></Link>
+              <Link href="/partners/community" passHref><MenuItem>Community Partners FAQ</MenuItem></Link>
+              <Link href="/partners/academic" passHref><MenuItem>Academic Partners FAQ</MenuItem></Link>
             </MenuList>
           </Menu>
           <Link href="/news" passHref><Button variant='ghost'>News</Button></Link>
