@@ -32,7 +32,7 @@ export default function Board() {
         )
         : data.map((obj, index) =>
           <Box key={index} pb='4em'>
-            <Flex templateColumns='repeat(3, 1fr)' gap={4} minH='210px' >
+            <Flex gap={4} minH='210px' >
               <Box minH='210px'>
                 <Heading size='md' mt='0'>{obj.name}</Heading>
                 <Text variant='content'>{obj.description}</Text>

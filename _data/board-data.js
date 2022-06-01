@@ -10,6 +10,11 @@ export const data = [
     url: `/assets/board-members/steve-stein.jpg`
   },
   {
+    name: `Mattie Gullixson`,
+    description: `Mattie Gullixson is a proud Colorado native with a passion for supporting her state's local communities and improving Colorado's cybersecurity. Gullixson's background is in economics, and she has worked across several policy areas from within the Colorado Governor's Office, El Paso County Elections Office, and Colorado Springs Mayor's Office. She transitioned into cybersecurity at the National Cybersecurity Center, where she led efforts to expand cyber resources to local governments in Colorado, and created a national campaign to educate state elected leaders on cybersecurity. Her exposure to PISCES came as she stood up the Colorado Cyber Resource Center, for which PISCES became an integral resource to local governments in Colorado. `,
+    url: `/assets/board-members/mattie-gullixson.jpg`
+  },
+  {
     name: `Dan Wordell`,
     description: `Dan Wordell is the Information Security Officer for the City of Spokane. He oversees the citywide strategic efforts to properly protect the city's information technology systems and the data associated with it. Formalizing the security and internal controls standards that the City of Spokane has adopted has helped mitigate security risks to employee and community. Dan designs effective and appropriate security governance documents, coordinates physical security, guides the corporate security strategy, develops effective corporate training programs, and identifies required technical/administrative controls necessary to enable an appropriate risk-based approach to security.`,
     url: `/assets/board-members/dan-wordell.jpg`
