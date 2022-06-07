@@ -16,7 +16,7 @@ export default function Layout({ title, children, background = 'home' }) {
         <title>
           {title}
         </title>
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/logo.webp" />
         <link rel="preload" as='image' href="/bg-alt.webp" />
         <link rel="preload" as='image' href="/bg.webp" />
       </Head>
