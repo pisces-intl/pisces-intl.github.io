@@ -34,6 +34,7 @@ export default function Layout({ title, children, background = 'home' }) {
 
             <Image
               layout='fill'
+              priority={true}
               placeholder='blur'
               objectFit="cover"
               src={bg}
@@ -59,6 +60,7 @@ export default function Layout({ title, children, background = 'home' }) {
 
             <Image
               layout='fill'
+              priority={true}
               placeholder='blur'
               objectFit="cover"
               src={bgAlt}
