@@ -5,7 +5,6 @@ import {
   Spacer,
   HStack,
   Button,
-  Image,
   Menu,
   MenuButton,
   MenuList,
@@ -13,9 +12,12 @@ import {
   IconButton,
   MenuGroup,
   MenuDivider,
+  Box,
 } from '@chakra-ui/react';
 import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../public/logo.webp'
 
 
 export default function Navbar() {
@@ -30,7 +32,9 @@ export default function Navbar() {
       <Flex paddingTop={8} alignItems='center'>
         <Link href="/" passHref>
           <HStack _hover={{ cursor: 'pointer' }}>
-            <Image w='65px' src='/logo.webp' alt='PISCES Logo' />
+            <Box w='65px'>
+              <Image placeholder='blur' src={logo} alt='PISCES Logo' />
+            </Box>
             <Text fontWeight={500} fontSize='40px' lineHeight='49px'>PISCES</Text>
           </HStack>
         </Link>
@@ -62,7 +66,9 @@ export default function Navbar() {
       <Flex paddingTop={12}>
         <Link href="/" passHref>
           <HStack _hover={{ cursor: 'pointer' }}>
-            <Image w='65px' src='/logo.webp' alt='PISCES Logo' />
+            <Box w='65px'>
+              <Image src={logo} alt='PISCES Logo' />
+            </Box>
             <Text fontWeight={500} fontSize='40px' lineHeight='49px'>PISCES</Text>
           </HStack>
         </Link>

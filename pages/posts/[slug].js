@@ -29,7 +29,7 @@ export default function Post({ post, allPosts }) {
       </Link>
       <Text py={5} fontSize='16px' fontWeight={400} color='#CCCCCC'>{new Date(post.date).toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric' })}</Text>
       <Heading mt='' size='lg'>{post.title}</Heading>
-      <Text pb={8} fontSize='16px' color='#BABABA' fontWeight={500}>{post?.author?.name}</Text>
+      <Text pb={8} fontSize='1.1em' color='#BABABA' fontWeight={500}>{post?.author?.name}</Text>
       <Box pb={isMobile ? '2em' : '30vh'}>
         <ReactMarkdown className='markdown'>{post.content}</ReactMarkdown>
         {post?.video && <ReactPlayer controls width='100%' url={post.video} />}

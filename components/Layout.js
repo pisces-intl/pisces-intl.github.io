@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head'
 import Script from 'next/script';
+import Image from 'next/image';
 import {
   ChakraProvider,
   Box,
@@ -8,6 +9,9 @@ import {
 } from '@chakra-ui/react';
 import theme from '../components/Theme'
 import Navbar from '../components/Navbar';
+
+import bg from '../public/bg.webp'
+import bgAlt from '../public/bg-alt.webp'
 
 export default function Layout({ title, children, background = 'home' }) {
   return (
@@ -17,29 +21,57 @@ export default function Layout({ title, children, background = 'home' }) {
           {title}
         </title>
         <link rel="icon" href="/logo.webp" />
-        <link rel="preload" as='image' href="/bg-alt.webp" />
-        <link rel="preload" as='image' href="/bg.webp" />
       </Head>
       <Script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8" />
       {background === 'home' &&
-        <Box w='100vw' minH='100vh' h='100%' bgSize='cover !important' bg='url(/bg.webp) no-repeat center center fixed'>
+        <>
+          <Box
+            position='fixed'
+            h='100vh'
+            w='100vw'
+            overflow='hidden'
+            zIndex='-1' >
+
+            <Image
+              layout='fill'
+              placeholder='blur'
+              objectFit="cover"
+              src={bg}
+              alt='Background'
+            />
+          </Box>
           <Box w='100%' minH='100vh' h='100%' bg='linear-gradient(to bottom, rgba(51, 51, 51, 0.65), rgba(51, 51, 51, 0.85))'>
             <Container maxW='1200px' >
               <Navbar />
               {children}
             </Container>
           </Box>
-        </Box>
+        </>
       }
       {background === 'alt' &&
-        <Box w='100vw' minH='100vh' h='100%' bgSize='cover !important' bg='url(/bg-alt.webp) no-repeat center center fixed'>
+        <>
+          <Box
+            position='fixed'
+            h='100vh'
+            w='100vw'
+            overflow='hidden'
+            zIndex='-1' >
+
+            <Image
+              layout='fill'
+              placeholder='blur'
+              objectFit="cover"
+              src={bgAlt}
+              alt='Background'
+            />
+          </Box>
           <Box w='100%' minH='100vh' h='100%' bg='linear-gradient(to bottom, rgba(51, 51, 51, 0.75), rgba(51, 51, 51, 0.95))'>
-            <Container maxW='1200px'>
+            <Container maxW='1200px' >
               <Navbar />
               {children}
             </Container>
           </Box>
-        </Box>
+        </>
       }
       {background === 'other' &&
         <Box position='relative' minH='100vh' w='100%' h='100%' bg='linear-gradient(180deg, rgba(51,51,51,1) 0%, rgba(51,51,51,1) 120px, rgba(50,54,64,1) 120px, rgba(50,54,64,1) 100%)'>

@@ -1,57 +1,57 @@
 export const data = [
   {
     alt: `Central Washington University`,
-    image: `/assets/academic-partners/cwu.webp`,
+    image: `cwu`,
     url: `https://www.cwu.edu/`
   },
   {
     alt: `MSU Denver`,
-    image: `/assets/academic-partners/msu.webp`,
+    image: `msu`,
     url: `https://www.msudenver.edu/`
   },
   {
     alt: `Spokane Falls Community College`,
-    image: `/assets/academic-partners/sfcc.webp`,
+    image: `sfcc`,
     url: `https://sfcc.spokane.edu/`
   },
   {
     alt: `University of Kentucky`,
-    image: `/assets/academic-partners/uok.webp`,
+    image: `uok`,
     url: `https://www.uky.edu/`
   },
   {
     alt: `Alabama A&M University`,
-    image: `/assets/academic-partners/aamu.webp`,
+    image: `aamu`,
     url: `https://www.aamu.edu/`
   },
   {
     alt: `Saint Martin's University`,
-    image: `/assets/academic-partners/smu.webp`,
+    image: 'smu',
     url: `https://www.stmartin.edu/`
   },
   {
     alt: `Green River Community College`,
-    image: `/assets/academic-partners/grc.webp`,
+    image: `grc`,
     url: `https://www.greenriver.edu/`
   },
   {
     alt: `Eastern Washington University`,
-    image: `/assets/academic-partners/ewu.webp`,
+    image: `ewu`,
     url: `https://www.ewu.edu/`
   },
   {
     alt: `Pueblo Community College`,
-    image: `/assets/academic-partners/pcc.webp`,
+    image: `pcc`,
     url: `https://www.pueblocc.edu/`
   },
   {
     alt: `Colorado Northwest Community College`,
-    image: `/assets/academic-partners/cncc.webp`,
+    image: `cncc`,
     url: `https://www.cncc.edu/`
   },
   {
     alt: `Western Washington University`,
-    image: `/assets/academic-partners/wwu.webp`,
+    image: `wwu`,
     url: `https://www.wwu.edu/`
   }
 ]

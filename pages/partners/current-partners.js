@@ -1,7 +1,9 @@
 import React from 'react';
-import { Center, SlideFade, Heading, Image, Wrap } from '@chakra-ui/react';
+import { Center, SlideFade, Heading, Wrap } from '@chakra-ui/react';
 import Layout from '../../components/Layout';
 import { data } from '../../_data/partners-data';
+import Image from 'next/image';
+import * as logos from '../../public/assets/academic-partners/index'
 
 export default function CurrentPartners() {
   return (
@@ -10,9 +12,9 @@ export default function CurrentPartners() {
       <Wrap justify='center' spacing='2vw' mb='2em'>
         {data.map(partner =>
           <Center w='30vw' maxW='225px' key={partner.alt}>
-            <SlideFade in={true} offsetY='20px'>
+            <SlideFade in={true} offsetY='20px' borderRadius='1em'>
               <a target='_blank' rel="noreferrer" href={partner.url} >
-                <Image borderRadius='1em' src={partner.image} alt={partner.alt} />
+                <Image src={logos[partner.image]} alt={partner.alt} />
               </a>
             </SlideFade>
           </Center>

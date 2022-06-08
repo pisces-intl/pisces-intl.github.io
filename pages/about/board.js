@@ -1,7 +1,10 @@
-import { Heading, Image, SimpleGrid, Text, Box, Grid, GridItem, Flex, Spacer, VStack } from '@chakra-ui/react';
+import { Heading, Text, Box, Flex, Spacer, VStack } from '@chakra-ui/react';
 import React from 'react';
 import Layout from '../../components/Layout';
 import { data } from '../../_data/board-data';
+import Image from 'next/image';
+import * as pics from '../../public/assets/board-members/index'
+
 
 export default function Board() {
   const [isMobile, setIsMobile] = React.useState(false)
@@ -17,16 +20,17 @@ export default function Board() {
         data.map((obj, index) =>
           <VStack key={index} pb='2em' spacing={4}>
             <Heading w='100%' size='md' mb='0'>{obj.name}</Heading>
-            {obj.url && <Box
-              bg={`url(${obj.url})`}
-              minW='320px'
-              minH='210px'
-              w='100%'
-              bgSize='cover'
-              bgPos='center 30%'
-              alt={obj.name}
-              borderRadius='8px'
-            />}
+            <Box minW='320px' minH='210px' w='92vw' position='relative'>
+              <Image
+                className='board-photo'
+                placeholder='blur'
+                layout='fill'
+                objectPosition='50% 30%'
+                objectFit="cover"
+                src={pics[obj.image]}
+                alt={obj.name}
+              />
+            </Box>
             <Text variant='content'>{obj.description}</Text>
           </VStack>
         )
@@ -38,15 +42,17 @@ export default function Board() {
                 <Text variant='content'>{obj.description}</Text>
               </Box>
               <Spacer />
-              <Box
-                bg={obj.url ? `url(${obj.url})` : `url(https://via.placeholder.com/320x210.webp/3d3d3e/FFFFFF?text=${encodeURIComponent(obj.name)})`}
-                minW='320px'
-                minH='210px'
-                bgSize='cover'
-                bgPos='center 30%'
-                alt={obj.name}
-                borderRadius='8px'
-              />
+              <Box minW='320px' minH='210px' w='320px' position='relative'>
+                <Image
+                  className='board-photo'
+                  placeholder='blur'
+                  layout='fill'
+                  objectPosition='50% 30%'
+                  objectFit="cover"
+                  src={pics[obj.image]}
+                  alt={obj.name}
+                />
+              </Box>
             </Flex>
           </Box>
         )

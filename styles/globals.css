@@ -29,6 +29,11 @@ body, .table-of-contents {
 	overflow: overlay;
 }
 
+/* Board Photos */
+.board-photo {
+	border-radius: 0.8em;
+}
+
 /* Markdown Styles */
 
 .markdown a {
@@ -41,12 +46,11 @@ body, .table-of-contents {
 
 .markdown p {
 	font-weight: 500;
-	font-size: 1.2em;
+	font-size: 1em;
 	line-height: 150%;
 	color: #BABABA;
 	padding-bottom: 1em;
 }
-
 
 .markdown ul {
 	font-weight: 400;
