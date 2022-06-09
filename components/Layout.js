@@ -27,10 +27,8 @@ export default function Layout({ title, children, background = 'home' }) {
         <>
           <Box
             position='fixed'
-            minH='100vh'
-            h='100%'
-            minW='100vw'
-            w='100%'
+            h='100vh'
+            w='100vw'
             overflow='hidden'
             zIndex='-1' >
 
@@ -55,10 +53,8 @@ export default function Layout({ title, children, background = 'home' }) {
         <>
           <Box
             position='fixed'
-            minH='100vh'
-            h='100%'
-            minW='100vw'
-            w='100%'
+            h='100vh'
+            w='100vw'
             overflow='hidden'
             zIndex='-1' >
 
