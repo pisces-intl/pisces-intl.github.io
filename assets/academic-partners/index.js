@@ -1,0 +1,11 @@
+export * as aamu from './aamu.webp';
+export * as cncc from './cncc.webp'
+export * as cwu from './cwu.webp'
+export * as ewu from './ewu.webp'
+export * as grc from './grc.webp'
+export * as msu from './msu.webp'
+export * as pcc from './pcc.webp'
+export * as sfcc from './sfcc.webp'
+export * as smu from './smu.webp'
+export * as uok from './uok.webp'
+export * as wwu from './wwu.webp'
