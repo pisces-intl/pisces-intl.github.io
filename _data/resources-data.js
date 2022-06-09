@@ -13,6 +13,11 @@ export const data = {
   ],
   documents: [
     {
+      url: `/assets/documents/workshop_report_22.pdf`,
+      title: `Academic Workshop Report 2022`,
+      type: `PDF`
+    },
+    {
       url: `/assets/documents/academic_partner_mou_waivers.pdf`,
       title: `Academic Partner MOU`,
       type: `PDF`
@@ -29,7 +34,7 @@ export const data = {
     },
     {
       url: `/assets/documents/pisces_academic_workshop_report.pdf`,
-      title: `Academic Workshop Report`,
+      title: `Academic Workshop Report 2021`,
       type: `PDF`
     },
     {
