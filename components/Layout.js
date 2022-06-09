@@ -41,7 +41,9 @@ export default function Layout({ title, children, background = 'home' }) {
               alt='Background'
             />
           </Box>
-          <Box w='100%' minH='100vh' h='100%' bg='linear-gradient(to bottom, rgba(51, 51, 51, 0.65), rgba(51, 51, 51, 0.85))'>
+          <Box zIndex='-1' w='100vw' h='100vh' position='fixed' bg='linear-gradient(to bottom, rgba(51, 51, 51, 0.65), rgba(51, 51, 51, 0.85))' />
+          <Box zIndex='0' w='100%' h='100%' minH='100vh'>
+
             <Container maxW='1200px' >
               <Navbar />
               {children}
