@@ -2,34 +2,39 @@
 	font-family: "Montserrat";
 	src: url("../lib/fonts/Montserrat-VariableFont_wght.ttf");
 }
+
 @font-face {
 	font-family: "MontserratBold";
 	src: url("../lib/fonts/Montserrat-ExtraBold.ttf");
 }
 
-body::-webkit-scrollbar{
-  width: 0.8em;
+body::-webkit-scrollbar {
+	width: 0.8em;
 }
 
 .table-of-contents::-webkit-scrollbar {
-  width: 0.4em;
+	width: 0.4em;
 }
- 
-body::-webkit-scrollbar-track, .table-of-contents::-webkit-scrollbar-track {
-  color: none;
+
+body::-webkit-scrollbar-track,
+.table-of-contents::-webkit-scrollbar-track {
+	color: none;
 }
- 
-body::-webkit-scrollbar-thumb, .table-of-contents::-webkit-scrollbar-thumb {
-  background-color: rgba(166, 183, 255, 0.4);
-  border: 1px solid rgba(166, 183, 255, 0.4);
+
+body::-webkit-scrollbar-thumb,
+.table-of-contents::-webkit-scrollbar-thumb {
+	background-color: rgba(166, 183, 255, 0.4);
+	border: 1px solid rgba(166, 183, 255, 0.4);
 	border-radius: 0.8em;
 }
 
-body, .table-of-contents {
+body,
+.table-of-contents {
 	overflow: overlay;
 }
 
 /* Board Photos */
+
 .board-photo {
 	border-radius: 0.8em;
 }
@@ -58,4 +63,38 @@ body, .table-of-contents {
 	color: #BABABA;
 	padding-left: 1em;
 	list-style-type: disc;
+}
+
+/* Partner Style */
+@keyframes darken {
+	0% {
+		background: rgba(51, 51, 51, 0.65);
+	}
+
+	100% {
+		background: rgba(51, 51, 51, 0.85);
+	}
+}
+@keyframes lighten {
+	0% {
+		background: rgba(51, 51, 51, 0.65);
+	}
+
+	100% {
+		background: rgba(51, 51, 51, 0.85);
+	}
+}
+
+.partner.darken {
+	animation-name: darken;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+}
+
+.partner.card {
+	background: rgba(51, 51, 51, 0.55);
+	animation-name: lighten;
+	animation-duration: 0.3s;
+	animation-fill-mode: backwards;
+	animation-direction: reverse;
 }
