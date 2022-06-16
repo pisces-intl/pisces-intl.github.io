@@ -8,7 +8,7 @@ export default function CurrentPartners() {
   return (
     <Layout title='PISCES | Current Partners' background='other'>
       <Heading py='3vw' textAlign='center' size='lg'>Our Partners</Heading>
-      <Wrap justify='center' spacing='1vw' mb='2em'>
+      <Wrap justify='center' spacing='1em' mb='2em'>
         {data.map(partner =>
           <PartnerCard key={partner.image} partner={partner} />
         )}
