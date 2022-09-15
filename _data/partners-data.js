@@ -19,9 +19,9 @@ export const data = [
   },
   {
     type: 'Academic Partner',
-    name: `University of Kentucky`,
-    image: `uok`,
-    url: `https://www.uky.edu/`
+    name: `Murray State University`,
+    image: `murr`,
+    url: `https://www.murraystate.edu/`
   },
   {
     type: 'Academic Partner',
