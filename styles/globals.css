@@ -59,10 +59,18 @@ body,
 
 .markdown ul {
 	font-weight: 400;
-	font-size: 1.1em;
+	font-size: 1em;
 	color: #BABABA;
 	padding-left: 1em;
 	list-style-type: disc;
+	padding-bottom: 1em;
+}
+
+.markdown ol {
+	font-weight: 400;
+	font-size: 1em;
+	color: #BABABA;
+	padding-left: 2em;
 }
 
 /* Partner Style */
