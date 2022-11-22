@@ -1,6 +1,11 @@
 export const data = {
   links: [
     {
+      url: `https://colorado-crc.com/pisces/`,
+      title: `Colorado-CRC PISCES Contact`,
+      type: `Partner Link`
+    },
+    {
       url: `https://www.cisa.gov/`,
       title: `CISA Pathways Internships`,
       type: `Resource Link`
