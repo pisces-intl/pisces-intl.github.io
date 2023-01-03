@@ -24,7 +24,11 @@ export default function News({ allPosts }) {
       <VStack pb='2em' spacing={5} >
         {
           allPosts.filter(element =>
-            search ? (element?.title?.includes(search) || element?.date?.includes(search)) : element
+            search ?
+              (element?.title?.toLowerCase().includes(search.toLowerCase())
+                || element?.date?.includes(search)
+                || element?.excerpt?.toLowerCase().includes(search.toLowerCase()))
+              : element
           )
             .map((nextPost, index) => (
               <NewsCard type='alt' key={index} post={nextPost} />
