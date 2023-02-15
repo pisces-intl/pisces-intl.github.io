@@ -1,7 +1,7 @@
 export const data = [
   {
     name: `Michael Hamilton, MS, CISSP`,
-    description: `Michael is the Founder and Chief Information Security Officer of CI Security and the Founder and Chairman of the Board of the PISCES Project. In a career spanning nearly 30 years, Michael has served as a Cybersecurity Policy Advisor for Washington State; Vice-Chair of the State, Local, Tribal, and Territorial Government Coordinating Council; Chief Information Security Officer for the City of Seattle; and Managing Consultant for VeriSign Global Security Consulting. In a previous life, he developed algorithms for hyperspectral remote sensing as an Ocean Scientist at the NASA Jet Propulsion Laboratory.`,
+    description: `Michael is the Founder and Chief Information Security Officer of Critical Insight and the Founder and Chairman of the Board of the PISCES Project. In a career spanning nearly 30 years, Michael has served as a Cybersecurity Policy Advisor for Washington State; Vice-Chair of the State, Local, Tribal, and Territorial Government Coordinating Council; Chief Information Security Officer for the City of Seattle; and Managing Consultant for VeriSign Global Security Consulting. In a previous life, he developed algorithms for hyperspectral remote sensing as an Ocean Scientist at the NASA Jet Propulsion Laboratory.`,
     image: `mh`
   },
   {

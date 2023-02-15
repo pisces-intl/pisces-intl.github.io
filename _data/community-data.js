@@ -29,7 +29,7 @@ export const data = [
   },
   {
     title: `Can you offer assistance in incident response?`,
-    text: `Yes, through our private sector affiliate CI Security.`
+    text: `Yes, through our private sector affiliate Critical Insight.`
   },
   {
     title: `Will students be able to read e-mail?`,
