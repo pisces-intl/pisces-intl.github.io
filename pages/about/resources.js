@@ -1,8 +1,9 @@
 import React from 'react';
-import { Heading, Input, SimpleGrid } from '@chakra-ui/react';
+import { Box, Heading, Input, SimpleGrid } from '@chakra-ui/react';
 import Layout from '../../components/Layout';
 import ResourceCard from '../../components/ResourceCard';
 import { data } from '../../_data/resources-data'
+import { toCapitalCase } from '../../lib/api';
 
 export default function Resources() {
   const [search, setSearch] = React.useState('');
@@ -21,28 +22,22 @@ export default function Resources() {
         value={search}
         onChange={handleChange}
       />
-      <Heading size='md'>Links</Heading>
-      <SimpleGrid columns={{ sm: 2, md: 3 }} spacing={6}>
-        {
-          data.links.filter(link =>
-            search ? (link?.title?.includes(search) || link?.type?.includes(search)) : link
-          )
-            .map((link, index) => (
-              <ResourceCard key={index} resource={link} />
-            ))
-        }
-      </SimpleGrid>
-      <Heading size="md">Documents</Heading>
-      <SimpleGrid columns={{ sm: 2, md: 3 }} spacing={6} pb='2em'>
-        {
-          data.documents.filter(document =>
-            search ? (document?.title?.includes(search) || document?.type?.includes(search)) : document
-          )
-            .map((document, index) => (
-              <ResourceCard key={index} resource={document} />
-            ))
-        }
-      </SimpleGrid>
+      {Object.entries(data).map(([key, value]) => 
+      <>
+        <Heading size='md'>{toCapitalCase(key)}</Heading>
+        <SimpleGrid columns={{ sm: 2, md: 3 }} spacing={6}>
+          {
+            value.filter(item =>
+              search ? (item?.title?.includes(search) || item?.type?.includes(search)) : item
+            )
+              .map((link, index) => (
+                <ResourceCard key={index} resource={link} />
+              ))
+          }
+        </SimpleGrid>
+      </>
+      )}
+      <Box pb={10}/>
     </Layout>
   );
 }
