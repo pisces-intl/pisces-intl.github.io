@@ -6,7 +6,6 @@ import Layout from '../components/Layout';
 import Image from 'next/image';
 
 import paypal from '../public/paypal.webp'
-import amazon from '../public/amazon.webp'
 
 export default function Donate() {
   return (
@@ -22,12 +21,6 @@ export default function Donate() {
       <Link href="https://www.paypal.com/donate?business=VTZ5DAMVPJ42S&item_name=Donate+to+PISCES&currency_code=USD" passHref>
         <Button maxW='12em' size='lg' mt='1em' mb='2em' rightIcon={<ExternalLinkIcon />}>
           <Image alt='Donate with Paypal' src={paypal} />
-        </Button>
-      </Link>
-      <Text variant='content'>You can shop on Amazon Smile with the below URL to share a percentage of the purchase with us.</Text>
-      <Link href="https://smile.amazon.com/ch/84-2548117" passHref>
-        <Button maxW='12em' size='lg' mt='1em' mb='5em' rightIcon={<ExternalLinkIcon />}>
-          <Image alt='Amazon Smile' src={amazon} />
         </Button>
       </Link>
     </Layout>

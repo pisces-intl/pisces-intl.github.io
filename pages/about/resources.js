@@ -22,22 +22,22 @@ export default function Resources() {
         value={search}
         onChange={handleChange}
       />
-      {Object.entries(data).map(([key, value]) => 
-      <>
-        <Heading size='md'>{toCapitalCase(key)}</Heading>
-        <SimpleGrid columns={{ sm: 2, md: 3 }} spacing={6}>
-          {
-            value.filter(item =>
-              search ? (item?.title?.includes(search) || item?.type?.includes(search)) : item
-            )
-              .map((link, index) => (
-                <ResourceCard key={index} resource={link} />
-              ))
-          }
-        </SimpleGrid>
-      </>
+      {Object.entries(data).map(([key, value]) =>
+        <>
+          <Heading size='md'>{toCapitalCase(key)}</Heading>
+          <SimpleGrid columns={{ sm: 2, md: 3 }} spacing={6}>
+            {
+              value.filter(item =>
+                search ? (item?.title?.includes(search) || item?.type?.includes(search)) : item
+              )
+                .map((link, index) => (
+                  <ResourceCard key={index} resource={link} />
+                ))
+            }
+          </SimpleGrid>
+        </>
       )}
-      <Box pb={10}/>
+      <Box pb={10} />
     </Layout>
   );
 }

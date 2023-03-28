@@ -14,7 +14,7 @@ export const data = {
       url: `https://nwrtc.pnnl.gov/`,
       title: `Northwest Regional Technology Center for Homeland Security`,
       type: `Resource Link`
-    }
+    },
   ],
   documents: [
     {
@@ -46,6 +46,38 @@ export const data = {
       url: `/assets/documents/flier_pisces_pnnl.pdf`,
       title: `Official One Pager`,
       type: `PDF`
-    }
-  ]
+    },
+  ],
+  flyers: [
+    {
+      url: `/assets/documents/flyers/PISCES_Flyer_General.pdf`,
+      title: `Flyer - General`,
+      type: `PDF`
+    },
+    {
+      url: `/assets/documents/flyers/PISCES_Flyer_Academic_Institution.pdf`,
+      title: `Flyer - Academic Instution`,
+      type: `PDF`
+    },
+    {
+      url: `/assets/documents/flyers/PISCES_Flyer_Community_Partner.pdf`,
+      title: `Flyer - Community Partner`,
+      type: `PDF`
+    },
+    {
+      url: `/assets/documents/flyers/PISCES_Flyer_Faculty.pdf`,
+      title: `Flyer - Faculty`,
+      type: `PDF`
+    },
+    {
+      url: `/assets/documents/flyers/PISCES_Flyer_Processes.pdf`,
+      title: `Flyer - Processes`,
+      type: `PDF`
+    },
+    {
+      url: `/assets/documents/flyers/PISCES_Flyer_Students.pdf`,
+      title: `Flyer - Students`,
+      type: `PDF`
+    },
+  ],
 }
