@@ -22,7 +22,7 @@ function NewsCard({ post, type = "home" }) {
               </Text>
             </HStack>
             <Text w='100%' minH='3em' lineHeight='1.5em' fontSize='1em' color='#C2FCFF'>{post.title}</Text>
-            <Text wordBreak='break-word' w='100%' color='#CCCCCC' fontSize={16} fontWeight={400}>{post.excerpt.slice(0, 150)}...</Text>
+            <Text wordBreak='break-word' w='100%' color='#CCCCCC' fontSize={16} fontWeight={400}>{post.excerpt.length > 150 ? post.excerpt.slice(0, 150) + "..." : post.excerpt}</Text>
           </VStack>
         </Box>
       </Link>
