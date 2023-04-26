@@ -25,6 +25,11 @@ export const data = [
     image: `ef`
   },
   {
+    name: `Alisha King`,
+    description: `Alisha King is a humanitarian technologist and founder of the Washington State Coalition for Infrastructure Protection and Homeland Resilience (WA-CIPHR). Ms. King's professional accomplishments include working with the White House Office of Science and Technology Policy via the Disaster Innovation Initiative, serving as the Protected Critical Infrastructure Information Officer for Washington State, and providing mentorship through the Multi-State Information Sharing and Analysis Center and Center for Internet Security. Ms. King has been recognized for her innovative and impactful work in cybersecurity, privacy, and community engagement by the Washington Governor and Secretary of State.`,
+    image: `ak`
+  },
+  {
     name: `Brandon Hardenbrook`,
     description: `Brandon Hardenbrook serves as Chief Operating Officer of the Pacific NorthWest Economic Region (PNWER), a statutory public-private partnership chartered by the states of WA, OR, ID, MT, AK, and the Canadian provinces of BC, AB, SK, YT, and NWT. Brandon oversees all PNWER operations and working groups, including the Center for Regional Disaster Resilience. Prior to PNWER, Brandon served as an Army Air Defense Officer where he worked on the development and deployment of a new missile defense system.`,
     image: `bh`
