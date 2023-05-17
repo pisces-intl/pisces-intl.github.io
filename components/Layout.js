@@ -43,8 +43,8 @@ export default function Layout({ title, children, background = 'home' }) {
           </Box>
           <Box zIndex='-1' w='100vw' h='100vh' position='fixed' bg='linear-gradient(to bottom, rgba(51, 51, 51, 0.65), rgba(51, 51, 51, 0.85))' />
           <Box zIndex='0' w='100%' h='100%' minH='100vh'>
+            <Navbar />
             <Container maxW='1200px' >
-              <Navbar />
               {children}
             </Container>
           </Box>
@@ -70,8 +70,8 @@ export default function Layout({ title, children, background = 'home' }) {
           </Box>
           <Box zIndex='-1' w='100vw' h='100vh' position='fixed' bg='linear-gradient(to bottom, rgba(51, 51, 51, 0.75), rgba(51, 51, 51, 0.95))' />
           <Box zIndex='0' w='100%' h='100%' minH='100vh'>
+            <Navbar />
             <Container maxW='1200px' >
-              <Navbar />
               {children}
             </Container>
           </Box>
@@ -79,8 +79,8 @@ export default function Layout({ title, children, background = 'home' }) {
       }
       {background === 'other' &&
         <Box position='relative' minH='100vh' w='100%' h='100%' bg='linear-gradient(180deg, rgba(51,51,51,1) 0%, rgba(51,51,51,1) 120px, rgba(50,54,64,1) 120px, rgba(50,54,64,1) 100%)'>
+          <Navbar />
           <Container maxW='1200px' >
-            <Navbar />
             {children}
           </Container>
         </Box>

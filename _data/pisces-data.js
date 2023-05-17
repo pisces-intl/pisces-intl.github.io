@@ -1,6 +1,7 @@
 export const data = [
   {
     title: `What is PISCES?`,
+    video: `https://www.youtube.com/watch?v=y06m8g3ikic`,
     text: `The Public Infrastructure Security Cyber Education System (PISCES) provides qualified students with curricula and supervised experiences to act as entry-level cyber analysts. Students analyze streaming data for small communities or municipalities who may otherwise not be able to obtain cybersecurity to the extent needed. Through PISCES, a reliable high-quality pipeline is being developed to address the shortage of cyber professionals ready for the workforce.`
   },
   {

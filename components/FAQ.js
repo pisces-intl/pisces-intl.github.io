@@ -4,6 +4,8 @@ import { Link as ChakraLink } from '@chakra-ui/react'
 import Link from 'next/link';
 import Layout from './Layout';
 import ReactMarkdown from 'react-markdown'
+import ReactPlayer from 'react-player/lazy'
+
 
 export default function FAQ({ title, data }) {
   const [leftWidth, setLeftWidth] = React.useState(0)
@@ -35,6 +37,11 @@ export default function FAQ({ title, data }) {
           {data.map((obj, index) =>
             <Box key={index} mb='2em'>
               <Heading id={encodeURIComponent(obj.title)} size='md' scrollMarginTop='1em'>{obj.title}</Heading>
+              {obj?.video &&
+                <Box pb='1em'>
+                  <ReactPlayer controls width='100%' url={obj.video} />
+                </Box>
+              }
               <ReactMarkdown className='markdown'>{obj.text}</ReactMarkdown>
             </Box>
           )}
@@ -48,6 +55,11 @@ export default function FAQ({ title, data }) {
             {data.map((obj, index) =>
               <Box key={index} mb='4em'>
                 <Heading id={encodeURIComponent(obj.title)} mb='0.5em' size='md' scrollMarginTop='2em'>{obj.title}</Heading>
+                {obj?.video &&
+                  <Box pb='1em'>
+                    <ReactPlayer controls width='100%' url={obj.video} />
+                  </Box>
+                }
                 <ReactMarkdown className='markdown'>{obj.text}</ReactMarkdown>
               </Box>
             )}
