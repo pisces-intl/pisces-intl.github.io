@@ -22,8 +22,8 @@ export default function Index({ allPosts }) {
 
   return (
     <Layout title='PISCES'>
-      <Box minH={isMobile ? '70vh' : ''}>
-        <Heading fontSize={isMobile ? '1.3em' : '2em'} pt={isMobile ? '20vh' : '1.2em'} fontWeight={500}>Public Infrastructure Security Cyber Education System</Heading>
+      <Box minH={isMobile ? '50vh' : ''}>
+        <Heading fontSize={isMobile ? '1.3em' : '2em'} pt={isMobile ? '12vh' : '1.2em'} fontWeight={500}>Public Infrastructure Security Cyber Education System</Heading>
         <Text fontSize={isMobile ? '1.75em' : '4em'} fontFamily='MontserratBold' lineHeight='1.2em' pt={isMobile ? '0.3em' : 10} maxW={isMobile ? '' : '920px'}>Infrastructure protection, workforce development, and research.</Text>
         <Link href="/about/pisces" passHref>
           {isMobile ? <Button rightIcon={<ArrowForwardIcon />} mt={10} fontSize='1em'>Learn More</Button> : <Button rightIcon={<ArrowForwardIcon />} mt={10} p={6} fontSize='1.3em'>Learn more about our program</Button>}
