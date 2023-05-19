@@ -7,27 +7,15 @@ export const data = [
   },
   {
     type: 'Academic Partner',
-    name: `MSU Denver`,
-    image: `msu`,
-    url: `https://www.msudenver.edu/`
-  },
-  {
-    type: 'Academic Partner',
     name: `Spokane Falls Community College`,
     image: `sfcc`,
     url: `https://sfcc.spokane.edu/`
   },
   {
     type: 'Academic Partner',
-    name: `Murray State University`,
-    image: `murr`,
-    url: `https://www.murraystate.edu/`
-  },
-  {
-    type: 'Academic Partner',
-    name: `Alabama A&M University`,
-    image: `aamu`,
-    url: `https://www.aamu.edu/`
+    name: `Eastern Washington University`,
+    image: `ewu`,
+    url: `https://www.ewu.edu/`
   },
   {
     type: 'Academic Partner',
@@ -43,26 +31,32 @@ export const data = [
   },
   {
     type: 'Academic Partner',
-    name: `Eastern Washington University`,
-    image: `ewu`,
-    url: `https://www.ewu.edu/`
-  },
-  {
-    type: 'Academic Partner',
-    name: `Pueblo Community College`,
-    image: `pcc`,
-    url: `https://www.pueblocc.edu/`
-  },
-  {
-    type: 'Academic Partner',
-    name: `Colorado Northwest Community College`,
-    image: `cncc`,
-    url: `https://www.cncc.edu/`
-  },
-  {
-    type: 'Academic Partner',
     name: `Western Washington University`,
     image: `wwu`,
     url: `https://www.wwu.edu/`
-  }
+  },
+  {
+    type: 'Academic Partner',
+    name: `Murray State University`,
+    image: `murr`,
+    url: `https://www.murraystate.edu/`
+  },
+  {
+    type: 'Academic Partner',
+    name: `Alabama A&M University`,
+    image: `aamu`,
+    url: `https://www.aamu.edu/`
+  },
+  {
+    type: 'Academic Partner',
+    name: `MSU Denver`,
+    image: `msu`,
+    url: `https://www.msudenver.edu/`
+  },
+  {
+    type: 'Academic Partner',
+    name: `Pueblo Community College, Colorado`,
+    image: `pcc`,
+    url: `https://www.pueblocc.edu/`
+  },
 ]
