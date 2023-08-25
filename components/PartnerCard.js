@@ -11,15 +11,18 @@ import { ArrowForwardIcon } from '@chakra-ui/icons'
 import Image from 'next/image';
 import * as bgs from '../public/assets/academic-partners/index'
 
-function PartnerCard({ partner }) {
-  const { type, name, image, url } = partner
+function PartnerCard(props) {
+  const { type, name, image, url, state } = props.partner
+  const { isMobile } = props
   const [cardOver, setCardOver] = useState(false)
 
   return (
     <a target='_blank' rel="noreferrer" href={url} >
       <Box
-        boxSize='370px'
-        maxW='100vw'
+        boxSize={isMobile ? null : '370px'}
+        h={isMobile ? '12em' : null}
+        w={isMobile ? 'calc(100vw - 2em)' : null}
+        maxW={isMobile ? null : '100vw'}
         position='relative'
         onMouseEnter={() => setCardOver(true)}
         onMouseLeave={() => setCardOver(false)}
@@ -29,7 +32,7 @@ function PartnerCard({ partner }) {
           h='inherit'
           w='inherit'
           overflow='hidden'
-          borderRadius='1em'
+          borderRadius={isMobile ? '0.5em' : '1em'}
         >
           <Image
             priority={true}
@@ -43,14 +46,14 @@ function PartnerCard({ partner }) {
 
         <Box h='inherit' w='inherit' position='absolute' className={cardOver ? 'partner darken' : 'partner card'} />
 
-        <Flex position='absolute' h='100%' p='2em' alignItems='end'>
+        <Flex position='absolute' h='100%' p={isMobile ? '1em' : '2em'} alignItems='end'>
           <Box>
             <Text color='brand.100'>{type}</Text>
             <Heading mt='0.1em' mb='0.5em' size='md'>{name}</Heading>
 
             <Box maxH='2.5em' overflow='hidden'>
 
-              <SlideFade offsetX='-20px' offsetY='0' in={cardOver} unmountOnExit>
+              <SlideFade offsetX='-40px' offsetY='0' in={cardOver} unmountOnExit>
                 <Button variant='ghost'>Learn more about {image.toUpperCase()}</Button>
               </SlideFade>
 
