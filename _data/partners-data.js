@@ -6,13 +6,13 @@ export const data = [
     image: `umt`,
     url: `https://www.umt.edu/`
   },
-  {
-    type: 'Academic Partner',
-    name: `University of Cumberlands`,
-    state: "KY",
-    image: `uoc`,
-    url: `https://www.ucumberlands.edu/`
-  },
+  // {
+  //   type: 'Academic Partner',
+  //   name: `University of Cumberlands`,
+  //   state: "KY",
+  //   image: `uoc`,
+  //   url: `https://www.ucumberlands.edu/`
+  // },
   {
     type: 'Academic Partner',
     name: `Northern Kentucky University`,
@@ -20,13 +20,13 @@ export const data = [
     image: `nku`,
     url: `https://www.nku.edu/`
   },
-  {
-    type: 'Academic Partner',
-    name: `University of Kentucky`,
-    state: "KY",
-    image: `uky`,
-    url: `https://www.uky.edu/`
-  },
+  // {
+  //   type: 'Academic Partner',
+  //   name: `University of Kentucky`,
+  //   state: "KY",
+  //   image: `uky`,
+  //   url: `https://www.uky.edu/`
+  // },
   {
     type: 'Academic Partner',
     name: `Colorado State University`,
