@@ -65,7 +65,6 @@ export default function Navbar() {
             <MenuGroup>
               <Link href="/partners/community" passHref><MenuItem>Community Partners FAQ</MenuItem></Link>
               <Link href="/partners/academic" passHref><MenuItem>Academic Partners FAQ</MenuItem></Link>
-              <Link href="/partners/cisse" passHref><MenuItem>CISSE</MenuItem></Link>
               <Link href="/partners/current-partners" passHref><MenuItem>Current Partners</MenuItem></Link>
             </MenuGroup>
             <MenuDivider />
@@ -105,7 +104,6 @@ export default function Navbar() {
                 <MenuList>
                   <Link href="/partners/community" passHref><MenuItem>Community Partners FAQ</MenuItem></Link>
                   <Link href="/partners/academic" passHref><MenuItem>Academic Partners FAQ</MenuItem></Link>
-                  <Link href="/partners/cisse" passHref><MenuItem>CISSE</MenuItem></Link>
                   <Link href="/partners/current-partners" passHref><MenuItem>Current Partners</MenuItem></Link>
                 </MenuList>
               </Menu>

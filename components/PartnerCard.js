@@ -53,7 +53,7 @@ function PartnerCard(props) {
 
             <Box maxH='2.5em' overflow='hidden'>
 
-              <SlideFade offsetX='-40px' offsetY='0' in={cardOver} unmountOnExit>
+              <SlideFade offsetX='-40px' offsetY='0' in={cardOver} unmountOnExit >
                 <Button variant='ghost'>Learn more about {image.toUpperCase()}</Button>
               </SlideFade>
 
