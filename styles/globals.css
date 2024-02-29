@@ -49,7 +49,7 @@ body,
 	text-decoration: underline;
 }
 
-.markdown p {
+.markdown p, .markdown h2, .markdown h3 {
 	font-weight: 500;
 	font-size: 1em;
 	line-height: 150%;
@@ -71,6 +71,14 @@ body,
 	font-size: 1em;
 	color: #BABABA;
 	padding-left: 2em;
+}
+
+.markdown h2 {
+	font-size: larger;
+}
+
+.markdown h3 {
+	font-size: large;
 }
 
 /* Partner Style */
