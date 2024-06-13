@@ -22,7 +22,8 @@ export default function CurrentPartners() {
       <Wrap spacing='1.5em' pt='1.5em' mb='4em'>
         {corporate_data.data.map((partner, index) =>
           <SlideFade key={partner.image} in={true} transition={{ enter: { delay: 0.125 * (index + 1) } }}>
-            <PartnerCard isMobile={isMobile} key={partner.image} partner={{ ...partner, image_url: isMobile ? corporate_bgs[partner.mobile] : corporate_bgs[partner.image] }} />
+            {/* <PartnerCard isMobile={isMobile} key={partner.image} partner={{ ...partner, image_url: isMobile ? corporate_bgs[partner.mobile] : corporate_bgs[partner.image] }} /> */}
+            <PartnerCard isMobile={isMobile} key={partner.image} partner={{ ...partner, image_url: corporate_bgs[partner.image] }} />
           </SlideFade>
         )}
       </Wrap>
