@@ -6,34 +6,6 @@ export const data = [
     image: `umt`,
     url: `https://www.umt.edu/`
   },
-  // {
-  //   type: 'Academic Partner',
-  //   name: `University of Cumberlands`,
-  //   state: "KY",
-  //   image: `uoc`,
-  //   url: `https://www.ucumberlands.edu/`
-  // },
-  {
-    type: 'Academic Partner',
-    name: `Northern Kentucky University`,
-    state: "KY",
-    image: `nku`,
-    url: `https://www.nku.edu/`
-  },
-  // {
-  //   type: 'Academic Partner',
-  //   name: `University of Kentucky`,
-  //   state: "KY",
-  //   image: `uky`,
-  //   url: `https://www.uky.edu/`
-  // },
-  {
-    type: 'Academic Partner',
-    name: `Colorado State University`,
-    state: "CO",
-    image: `csu`,
-    url: `https://www.colostate.edu/`
-  },
   {
     type: 'Academic Partner',
     name: `Highline College`,
@@ -92,30 +64,9 @@ export const data = [
   },
   {
     type: 'Academic Partner',
-    name: `Murray State University`,
-    state: "KY",
-    image: `murr`,
-    url: `https://www.murraystate.edu/`
-  },
-  {
-    type: 'Academic Partner',
-    name: `Alabama A&M University`,
-    state: "AL",
-    image: `aamu`,
-    url: `https://www.aamu.edu/`
-  },
-  {
-    type: 'Academic Partner',
     name: `MSU Denver`,
     state: "CO",
     image: `msu`,
     url: `https://www.msudenver.edu/`
-  },
-  {
-    type: 'Academic Partner',
-    name: `Pueblo Community College, Colorado`,
-    state: "CO",
-    image: `pcc`,
-    url: `https://www.pueblocc.edu/`
   },
 ]
