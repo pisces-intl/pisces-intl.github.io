@@ -28,7 +28,7 @@ export default function Resources() {
           <SimpleGrid columns={{ sm: 2, md: 3 }} spacing={6}>
             {
               value.filter(item =>
-                search ? (item?.title?.includes(search) || item?.type?.includes(search)) : item
+                search ? (item?.title?.toLowerCase().includes(search.toLowerCase()) || item?.type?.toLowerCase().includes(search.toLowerCase())) : item
               )
                 .map((link, index) => (
                   <ResourceCard key={index} resource={link} />
