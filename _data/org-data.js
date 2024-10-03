@@ -35,22 +35,10 @@ export const data = [
     description: `Brandon Hardenbrook serves as Chief Operating Officer of the Pacific NorthWest Economic Region (PNWER), a statutory public-private partnership chartered by the states of WA, OR, ID, MT, AK, and the Canadian provinces of BC, AB, SK, YT, and NWT. Brandon oversees all PNWER operations and working groups, including the Center for Regional Disaster Resilience. Prior to PNWER, Brandon served as an Army Air Defense Officer where he worked on the development and deployment of a new missile defense system.`,
     image: `bh`
   },
-  // {
-  //   name: `Matt Boehnke`,
-  //   title: "Board Member",
-  //   description: `Matt is currently the Program Director for the Cyber Security Division and Assistant Professor in Computer Science at Columbia Basin College (CBC) in Pasco, WA. Matt was raised in Kennewick, graduating from Kamiakin High School in 1986. He then attended Eastern Washington University, where he graduated as an ROTC-Distinguished Military Graduate and received his active-duty commission in the U.S. Army Aviation branch in 1990. He spent the next 21 years in the service, rising to the rank of Lieutenant Colonel before retiring and moving back to Kennewick. Since 2015, Matt has served as the director and lead professor of the cybersecurity division at Columbia Basin College. He also owns a cybersecurity consulting business. Before joining the Legislature, he served for three years on the Kennewick City Council. In the House, Matt is serving on three committees, including in a leadership role as the ranking minority member of the Community and Economic Development Committee. He is also a member of the House Appropriations and Environment and Energy committees.`,
-  //   image: `mb`
-  // },
   {
     name: `Michael Tsikerdekis`,
     title: "Chair, Technical Advisory Committee",
     description: `Michael Tsikerdekis is an assistant professor in the Computer Science Department at Western Washington University. His research interests include deception, data mining, cybersecurity, and social computing. Michael has a PhD in Informatics from Masaryk University. He is a senior member of the Institute of Electrical and Electronics Engineers.`,
     image: `mt`
   },
-  // {
-  //   name: `Alisha King`,
-  //   title: "PISCES Staff",
-  //   description: `Alisha King is a humanitarian technologist and founder of the Washington State Coalition for Infrastructure Protection and Homeland Resilience (WA-CIPHR). Ms. King's professional accomplishments include working with the White House Office of Science and Technology Policy via the Disaster Innovation Initiative, serving as the Protected Critical Infrastructure Information Officer for Washington State, and providing mentorship through the Multi-State Information Sharing and Analysis Center and Center for Internet Security. Ms. King has been recognized for her innovative and impactful work in cybersecurity, privacy, and community engagement by the Washington Governor and Secretary of State.`,
-  //   image: `ak`
-  // },
 ]
