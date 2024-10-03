@@ -69,4 +69,11 @@ export const data = [
     image: `msu`,
     url: `https://www.msudenver.edu/`
   },
+  {
+    type: 'Academic Partner',
+    name: `Bellevue College`,
+    state: "WA",
+    image: `bcc`,
+    url: `https://www.bellevuecollege.edu/`
+  },
 ]
