@@ -39,7 +39,6 @@ function PartnerCard(props) {
           borderRadius={isMobile ? '0.5em' : '1em'}
         >
           <Image
-            unoptimized
             priority={true}
             layout='fill'
             placeholder='blur'

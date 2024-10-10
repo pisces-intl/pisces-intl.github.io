@@ -9,7 +9,7 @@ import * as corporate_bgs from '../../public/assets/corporate-partners/index'
 
 
 
-export default function CurrentPartners() {
+export default function CurrentPartners({ corporateData }) {
   const [isMobile, setIsMobile] = React.useState(false)
 
   React.useEffect(() => {
@@ -21,7 +21,7 @@ export default function CurrentPartners() {
     <Layout title='PISCES | Current Partners' background='other'>
       <Heading textAlign='left' size='lg'>Corporate Partners</Heading>
       <Wrap spacing='1.5em' pt='1.5em' mb='4em'>
-        {corporate_data.data.map((partner, index) => 
+        {corporateData.map((partner, index) => 
           <SlideFade key={partner.image} in={true} transition={{ enter: { delay: 0.125 * (index + 1) } }}>
             {isMobile && <PartnerCard isMobile={isMobile} key={partner.image} partner={{ ...partner, image_url: corporate_bgs[partner.mobile] }} />}
             {!isMobile && <PartnerCard isMobile={isMobile} key={partner.image} partner={{ ...partner, image_url: corporate_bgs[partner.image] }} />}
@@ -40,3 +40,15 @@ export default function CurrentPartners() {
   );
 }
 
+export async function getStaticProps() {
+  // Data fetching or importing
+  const corporateData = corporate_data.data; // Import directly if using static data
+  const academicData = academic_data.data; // Import static academic data if needed
+
+  return {
+    props: {
+      corporateData,
+      academicData,
+    },
+  };
+}
