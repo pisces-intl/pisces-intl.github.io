@@ -10,17 +10,25 @@ import * as corporate_bgs from '../../public/assets/corporate-partners/index'
 
 
 export default function CurrentPartners() {
-  const [isMobile, setIsMobile] = React.useState(false)
+const [isMobile, setIsMobile] = React.useState(false);
 
-  React.useEffect(() => {
-    setIsMobile(Boolean(window.innerWidth < 890))
-  }, [])
+React.useEffect(() => {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 890);
+  };
+
+  handleResize(); // Check once on mount
+  window.addEventListener('resize', handleResize);
+
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
+
 
   return (
     <Layout title='PISCES | Current Partners' background='other'>
       <Heading textAlign='left' size='lg'>Corporate Partners</Heading>
       <Wrap spacing='1.5em' pt='1.5em' mb='4em'>
-        {corporate_data.data.map((partner, index) =>
+        {corporate_data.data.map((partner, index) => 
           <SlideFade key={partner.image} in={true} transition={{ enter: { delay: 0.125 * (index + 1) } }}>
             {isMobile && <PartnerCard isMobile={isMobile} key={partner.image} partner={{ ...partner, image_url: corporate_bgs[partner.mobile] }} />}
             {!isMobile && <PartnerCard isMobile={isMobile} key={partner.image} partner={{ ...partner, image_url: corporate_bgs[partner.image] }} />}
@@ -38,3 +46,4 @@ export default function CurrentPartners() {
     </Layout>
   );
 }
+
