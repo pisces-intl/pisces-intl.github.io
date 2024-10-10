@@ -10,12 +10,20 @@ import * as corporate_bgs from '../../public/assets/corporate-partners/index'
 
 
 export default function CurrentPartners() {
-  const [isMobile, setIsMobile] = React.useState(false)
-
+  const [isMobile, setIsMobile] = React.useState(false);
+  const [hydrated, setHydrated] = React.useState(false);
+  
   React.useEffect(() => {
-    setIsMobile(Boolean(window.innerWidth < 890))
-  }, [])
-
+    setHydrated(true);
+    const handleResize = () => setIsMobile(window.innerWidth < 890);
+    handleResize(); // Check once on mount
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
+  if (!hydrated) {
+    return null; // Prevent rendering during SSR
+  }
 
   return (
     <Layout title='PISCES | Current Partners' background='other'>
