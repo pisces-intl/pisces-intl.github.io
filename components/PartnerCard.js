@@ -43,7 +43,7 @@ function PartnerCard(props) {
             layout='fill'
             placeholder='blur'
             objectFit="cover"
-            src={image_url}
+            src={image_url.default}
             alt='Background'
           />
         </Box>
