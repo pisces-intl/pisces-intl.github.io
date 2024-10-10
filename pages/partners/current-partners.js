@@ -10,18 +10,11 @@ import * as corporate_bgs from '../../public/assets/corporate-partners/index'
 
 
 export default function CurrentPartners() {
-const [isMobile, setIsMobile] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(false)
 
-React.useEffect(() => {
-  const handleResize = () => {
-    setIsMobile(window.innerWidth < 890);
-  };
-
-  handleResize(); // Check once on mount
-  window.addEventListener('resize', handleResize);
-
-  return () => window.removeEventListener('resize', handleResize);
-}, []);
+  React.useEffect(() => {
+    setIsMobile(Boolean(window.innerWidth < 890))
+  }, [])
 
 
   return (
