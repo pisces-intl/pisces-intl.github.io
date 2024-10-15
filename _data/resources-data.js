@@ -50,6 +50,11 @@ export const data = {
   ],
   flyers: [
     {
+      url: `/assets/documents/flyers/PISCES_Flyer_High_School.pdf`,
+      title: `Flyer - High School`,
+      type: `PDF`
+    },
+    {
       url: `/assets/documents/flyers/PISCES_Flyer_General.pdf`,
       title: `Flyer - General`,
       type: `PDF`
