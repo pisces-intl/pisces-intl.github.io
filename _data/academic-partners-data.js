@@ -76,4 +76,11 @@ export const data = [
     image: `bcc`,
     url: `https://www.bellevuecollege.edu/`
   },
+  {
+    type: 'Academic Partner',
+    name: `Whatcom Community College`,
+    state: "WA",
+    image: `wcc`,
+    url: `https://www.whatcom.edu/`
+  }
 ]
