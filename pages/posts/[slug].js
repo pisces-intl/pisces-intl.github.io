@@ -34,7 +34,7 @@ export default function Post({ post, allPosts }) {
         <ReactMarkdown className='markdown'>{post.content}</ReactMarkdown>
         {post?.video && <ReactPlayer controls width='100%' url={post.video} />}
       </Box>
-
+      <br />
       {isMobile ?
         <VStack spacing={6} pt={20} pb={5}>
           <Heading size='md'>Other Posts</Heading>
