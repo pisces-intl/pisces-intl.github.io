@@ -11,11 +11,17 @@ export const data = [
     description: `Steve Stein is the Executive Director of PISCES. As such Steve is responsible for the day-to-day business operations and expansion strategy for PISCES. Steve retired in 2017, after 38 years with Pacific Northwest National Laboratory where he served as a Senior Program Manager and Director of the Northwest Research and Technology Center providing new solutions to first responders and emergency managers.`,
     image: `ss`
   },
+  // {
+  //   name: `Mattie Gullixson`,
+  //   title: "Board Member",
+  //   description: `Mattie Gullixson is a proud Colorado native with a passion for supporting her state's local communities and improving Colorado's cybersecurity. Gullixson's background is in economics, and she has worked across several policy areas from within the Colorado Governor's Office, El Paso County Elections Office, and Colorado Springs Mayor's Office. She transitioned into cybersecurity at the National Cybersecurity Center, where she led efforts to expand cyber resources to local governments in Colorado, and created a national campaign to educate state elected leaders on cybersecurity. Her exposure to PISCES came as she stood up the Colorado Cyber Resource Center, for which PISCES became an integral resource to local governments in Colorado. `,
+  //   image: `mg`
+  // },
   {
-    name: `Mattie Gullixson`,
+    name: `Virginia Case`,
     title: "Board Member",
-    description: `Mattie Gullixson is a proud Colorado native with a passion for supporting her state's local communities and improving Colorado's cybersecurity. Gullixson's background is in economics, and she has worked across several policy areas from within the Colorado Governor's Office, El Paso County Elections Office, and Colorado Springs Mayor's Office. She transitioned into cybersecurity at the National Cybersecurity Center, where she led efforts to expand cyber resources to local governments in Colorado, and created a national campaign to educate state elected leaders on cybersecurity. Her exposure to PISCES came as she stood up the Colorado Cyber Resource Center, for which PISCES became an integral resource to local governments in Colorado. `,
-    image: `mg`
+    description: `Virginia Case stands at the forefront of modern marketing and user experience design, shaping how businesses innovate and thrive in competitive landscapes. As the founder and CEO of STRATAC, Virginia has led transformative initiatives that have driven measurable growth for technology startups and enterprises alike. She has held prominent board positions, including serving on the American Marketing Association, the National Small Business Association, and the Public Infrastructure Security Cyber Education System (PISCES). Her tenure as the Chair of the Tysons Regional Chamber of Commerce underscored her dedication to advancing business communities and fostering innovation.`,
+    image: `vc`
   },
   {
     name: `Dan Wordell`,
