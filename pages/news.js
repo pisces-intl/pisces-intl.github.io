@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import NewsCard from '../components/NewsCard';
 import { getAllPosts } from '../lib/api';
+import NewsletterSubscribe from '../components/NewsletterSubscribe';
 
 export default function News({ allPosts }) {
   const [search, setSearch] = React.useState('');
@@ -21,6 +22,7 @@ export default function News({ allPosts }) {
         value={search}
         onChange={handleChange}
       />
+      <NewsletterSubscribe />
       <VStack pb='2em' spacing={5} >
         {
           allPosts.filter(element =>

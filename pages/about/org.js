@@ -18,7 +18,7 @@ export default function Board() {
       <Heading size='lg' mb={isMobile ? '0' : '1.3em'}>PISCES Organization</Heading>
       {isMobile ?
         data.map((obj, index) =>
-          <VStack key={index} pb='2em' spacing={4}>
+          <VStack key={obj.name} pb='2em' spacing={4}>
             <Heading w='100%' size='md' mb='0'>{obj.name}</Heading>
             <Heading w='100%' fontSize='1.2em' fontWeight='light'>{obj.title}</Heading>
             <Box minW='320px' minH='210px' w='92vw' position='relative'>
@@ -36,7 +36,7 @@ export default function Board() {
           </VStack>
         )
         : data.map((obj, index) =>
-          <Box key={index} pb='4em'>
+          <Box key={obj.name} pb='4em'>
             <Flex gap={4} minH='210px' >
               <Box minH='210px'>
                 <Heading size='md' mt='0'>{obj.name}</Heading>
