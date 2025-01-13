@@ -9,6 +9,7 @@ import Link from 'next/link';
 import NewsCard from '../../components/NewsCard'
 import ReactMarkdown from 'react-markdown';
 import ReactPlayer from 'react-player/lazy'
+import NewsletterSubscribe from '../../components/NewsletterSubscribe';
 
 export default function Post({ post, allPosts }) {
   const [isMobile, setIsMobile] = React.useState(false)
@@ -36,8 +37,11 @@ export default function Post({ post, allPosts }) {
       </Box>
       <br />
       <br />
+
       {isMobile ?
         <VStack spacing={6} pt={20} pb={5}>
+          <NewsletterSubscribe />
+
           <Heading size='md'>Other Posts</Heading>
           {
             allPosts.filter(element => element.slug !== post.slug).slice(0, 3).map((nextPost, index) => (
@@ -47,6 +51,7 @@ export default function Post({ post, allPosts }) {
         </VStack>
         :
         <Box position='absolute' h='inherit' bottom='0' pb='3vh' maxW='inherit'>
+          <NewsletterSubscribe />
           <Text fontSize='24px' pb={4}>Other Posts</Text>
           <SimpleGrid columns={{ sm: 1, md: 3 }} spacing={8} >
             {

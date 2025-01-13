@@ -15,13 +15,47 @@ export default function Contact() {
 
   const router = useRouter()
   const [state, setState] = React.useState(initialState);
+  const [loading, setLoading] = React.useState(false)
   const [submitted, setSubmitted] = React.useState(false)
 
   const handleChange = (event) => setState({ ...state, [event.target.name]: event.target.value })
   const onClose = (e) => {
     setState(initialState)
     setSubmitted(false);
+    setLoading(false)
   }
+
+  const onSubmit = () => {
+    setLoading(true)
+    const payloadData = {
+      "type": "message",
+      "attachments": [
+        {
+          "contentType": "application/json",
+          "content": {
+            name: state.name,
+            email: state.email,
+            phone: state.phone,
+            organization: state.org,
+            message: state.message,
+            newsletter: state.newsletter ? "Yes" : "No",
+          }
+        }
+      ]
+    }
+    fetch("https://prod-51.westus.logic.azure.com:443/workflows/82dd17e1b619436d915d8c479aaec9b5/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pnDNxYdG-5weIp92hfImGv6sOfpzMQx8Mx7Y8pn9R4A",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json", },
+        body: JSON.stringify(payloadData)
+      }
+    ).then(onful => {
+      setSubmitted(true)
+      setLoading(false)
+    })
+
+  }
+
 
   return (
     <Layout title='PISCES | Contact' background='other'>
@@ -30,8 +64,6 @@ export default function Contact() {
         <Heading size='lg'>Contact Us</Heading>
         <Text variant='content' mb='1em'>Interested in partnering with PISCES? Please complete the form below.</Text>
         <Text variant='content' mb='2em'>Seeking employment? <Link target="_blank" rel="noreferrer" href="https://www.dhs.gov/homeland-security-careers">Try here instead</Link>. Unfortunately, PISCES {"can't"} respond to employment requests.</Text>
-
-        <form onSubmit={() => setSubmitted(true)} action="https://send.pageclip.co/HWQvvYzMyPeWAlq2GEjQh4LLQTCFwty8" className="pageclip-form" method="post">
 
           <Text mb='0.2em'>Name <Text as='span' variant='content'>(required)</Text></Text>
           <Input
@@ -98,9 +130,7 @@ export default function Contact() {
             <Text>Subscribe to Newsletter</Text>
           </HStack>
 
-          <Button mb='2em' size='lg' className="pageclip-form__submit" type="submit">Submit</Button>
-
-        </form>
+          <Button mb='2em' size='lg' isLoading={loading} onClick={onSubmit}>Submit</Button>
 
         <Modal isCentered isOpen={submitted} onClose={onClose}>
           <ModalOverlay />
