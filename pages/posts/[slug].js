@@ -35,6 +35,7 @@ export default function Post({ post, allPosts }) {
         {post?.video && <ReactPlayer controls width='100%' url={post.video} />}
       </Box>
       <br />
+      <br />
       {isMobile ?
         <VStack spacing={6} pt={20} pb={5}>
           <Heading size='md'>Other Posts</Heading>
