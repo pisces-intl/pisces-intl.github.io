@@ -82,5 +82,12 @@ export const data = [
     state: "WA",
     image: `wcc`,
     url: `https://www.whatcom.edu/`
+  },
+  {
+    type: 'Academic Partner',
+    name: `Bates Technical College`,
+    state: "WA",
+    image: `btc`,
+    url: `https://www.batestech.edu/`
   }
 ]
