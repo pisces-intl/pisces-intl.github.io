@@ -18,8 +18,8 @@
     "gray-matter": "^4.0.3",
     "next": "12.1.0",
     "next-export-optimize-images": "^1.4.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-markdown": "^8.0.1",
     "react-player": "^2.10.0"
   },
