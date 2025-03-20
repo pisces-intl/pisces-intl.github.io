@@ -9,6 +9,7 @@ import Link from 'next/link';
 import NewsCard from '../../components/NewsCard'
 import ReactMarkdown from 'react-markdown';
 import ReactPlayer from 'react-player/lazy'
+import rehypeRaw from 'rehype-raw';
 
 export default function Post({ post, allPosts }) {
   const [isMobile, setIsMobile] = React.useState(false)
@@ -31,7 +32,7 @@ export default function Post({ post, allPosts }) {
       <Heading mt='' size='lg'>{post.title}</Heading>
       {post?.author?.name && <Text pb={8} fontSize='1.1em' color='#BABABA' fontWeight={500}>{post?.author?.name}</Text>}
       <Box pb={isMobile ? '2em' : '33vh'}>
-        <ReactMarkdown className='markdown'>{post.content}</ReactMarkdown>
+        <ReactMarkdown className='markdown' rehypePlugins={[rehypeRaw]}>{post.content}</ReactMarkdown>
         {post?.video && <ReactPlayer controls width='100%' url={post.video} />}
       </Box>
       <br />
