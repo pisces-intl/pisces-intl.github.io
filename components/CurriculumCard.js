@@ -11,9 +11,13 @@ import {
 import { CheckIcon } from '@chakra-ui/icons';
 
 function CurriculumCard({ curriculum }) {
+  const [name, setName] = useState("");
+  const [organization, setOrganization] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("")
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
+  const [showForm, setShowForm] = useState(false)
 
   const onSubmit = () => {
     const payloadData = {
@@ -22,6 +26,9 @@ function CurriculumCard({ curriculum }) {
         {
           "contentType": "application/json",
           "content": {
+            "name": name,  // Added name field
+            "organization": organization,  // Added organization field
+            "phoneNumber": phone,  // Added phone number field
             "email": email,
             "curriculum": curriculum
           }
@@ -53,8 +60,62 @@ function CurriculumCard({ curriculum }) {
       <VStack h='100%' p={5} textAlign='left' spacing={3}>
         <Text color='brand.200' textTransform='uppercase' w='100%' fontSize={12} fontWeight={700}>Curriculum</Text>
         <Text w='100%' fontSize='1em' lineHeight='1.5em' minH='3em' color='brand.100'>{curriculum}</Text>
-        <Text w='100%' fontSize='1em' color='brand.200'>Request access via email</Text>
-        <SimpleGrid w='100%' spacing={2} columns={{ base: 3, sm: 4 }}>
+        <Button
+          variant="outline"
+          colorScheme="blue"
+          size="sm"
+          alignSelf="flex-start"
+          onClick={() => setShowForm(!showForm)} // Toggle form visibility
+        >
+          Request access via email
+        </Button>
+
+        {showForm && <SimpleGrid w='100%' spacing={2} columns={{ base: 1, sm: 2 }}>
+        <GridItem colSpan={2}>
+              <Input
+                w='100%'
+                color='#BABABA'
+                border='1px solid #BABABA'
+                bg='#3D434F'
+                borderRadius='4px'
+                type='text'
+                placeholder='Full Name'
+                value={name}
+                isDisabled={success}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </GridItem>
+            {/* Organization Input */}
+            <GridItem colSpan={2}>
+              <Input
+                w='100%'
+                color='#BABABA'
+                border='1px solid #BABABA'
+                bg='#3D434F'
+                borderRadius='4px'
+                type='text'
+                placeholder='Organization'
+                value={organization}
+                isDisabled={success}
+                onChange={(e) => setOrganization(e.target.value)}
+              />
+            </GridItem>
+            {/* Phone Number Input */}
+            <GridItem colSpan={2}>
+              <Input
+                w='100%'
+                color='#BABABA'
+                border='1px solid #BABABA'
+                bg='#3D434F'
+                borderRadius='4px'
+                type='tel'
+                placeholder='Phone Number'
+                value={phone}
+                isDisabled={success}
+                onChange={(e) => setPhone(e.target.value)}
+              />
+            </GridItem>
+            {/* Email Input */}
           <GridItem colSpan={3}>
             <Input
               w='100%'
@@ -71,7 +132,7 @@ function CurriculumCard({ curriculum }) {
           </GridItem>
           {!success ? <Button isLoading={loading} onClick={onSubmit} isDisabled={!email}>Request</Button>
           : <Button variant='outline' colorScheme='green' isDisabled={true} rightIcon={<CheckIcon/>}>Success </Button>}
-        </SimpleGrid>
+        </SimpleGrid>}
       </VStack>
     </Box>
   )
