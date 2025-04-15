@@ -38,10 +38,10 @@ export default function Index({ allPosts }) {
           }
         </VStack>
         :
-        <SimpleGrid columns={3} spacing={8} maxW='inherit' pr='1em' position='absolute' bottom='3vh'>
+        <SimpleGrid columns={3} spacing={8} maxW='inherit' pr='1em' mt={5}>
           {
             allPosts.slice(0, 3).map((post, index) => (
-              <NewsCard key={index} post={post} />
+              <NewsCard key={index} post={post}/>
             ))
           }
         </SimpleGrid>
