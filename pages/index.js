@@ -40,7 +40,7 @@ export default function Index({ allPosts }) {
           }
         </VStack>
         <Link href="/cotw" passHref>
-        <Box mt={10} textAlign={"center"} borderRadius="xl" overflow="hidden">
+        <Box mt={10} pb={5} textAlign={"center"} borderRadius="xl" overflow="hidden">
             <Image
               unoptimized
               src="/cotw.png"
@@ -62,7 +62,7 @@ export default function Index({ allPosts }) {
           }
         </SimpleGrid>
         <Link href="/cotw" passHref>
-        <Box opacity={0.8} mt={10} textAlign={"center"} _hover={{ opacity: 1, cursor: 'pointer' }} borderRadius="xl" overflow="hidden">
+        <Box opacity={0.8} mt={10} pb={5} textAlign={"center"} _hover={{ opacity: 1, cursor: 'pointer' }} borderRadius="xl" overflow="hidden">
             <Image
               src="/cotw.png"
               alt="Catch of the Week"
