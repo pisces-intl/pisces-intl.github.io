@@ -12,6 +12,7 @@ import Link from 'next/link';
 import NewsCard from '../components/NewsCard';
 import { getAllPosts } from '../lib/api';
 import Layout from '../components/Layout';
+import Image from 'next/image';
 
 export default function Index({ allPosts }) {
   const [isMobile, setIsMobile] = React.useState(false)
@@ -30,6 +31,7 @@ export default function Index({ allPosts }) {
         </Link>
       </Box>
       {isMobile ?
+        <>
         <VStack spacing={6} pt={20} pb={5}>
           {
             allPosts.slice(0, 3).map((post, index) => (
@@ -37,7 +39,20 @@ export default function Index({ allPosts }) {
             ))
           }
         </VStack>
+        <Link href="/cotw" passHref>
+        <Box mt={10} textAlign={"center"} borderRadius="xl" overflow="hidden">
+            <Image
+              src="/cotw.png"
+              alt="Catch of the Week"
+              layout="responsive"
+              height="400"
+              width="1200"
+            />
+        </Box>
+        </Link>
+        </>
         :
+        <>
         <SimpleGrid columns={3} spacing={8} maxW='inherit' pr='1em' mt={5}>
           {
             allPosts.slice(0, 3).map((post, index) => (
@@ -45,6 +60,17 @@ export default function Index({ allPosts }) {
             ))
           }
         </SimpleGrid>
+        <Link href="/cotw" passHref>
+        <Box opacity={0.8} mt={10} textAlign={"center"} _hover={{ opacity: 1, cursor: 'pointer' }} borderRadius="xl" overflow="hidden">
+            <Image
+              src="/cotw.png"
+              alt="Catch of the Week"
+              height="400"
+              width="1200"
+            />
+        </Box>
+        </Link>
+        </>
       }
     </Layout>
   );
