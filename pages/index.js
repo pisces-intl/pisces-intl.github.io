@@ -32,7 +32,7 @@ export default function Index({ allPosts }) {
       </Box>
       {isMobile ?
         <>
-        <VStack spacing={6} pt={20} pb={5}>
+        <VStack spacing={6} pt={20}>
           {
             allPosts.slice(0, 3).map((post, index) => (
               <NewsCard key={index} post={post} />
@@ -40,7 +40,7 @@ export default function Index({ allPosts }) {
           }
         </VStack>
         <Link href="/cotw" passHref>
-        <Box mt={10} pb={5} textAlign={"center"} borderRadius="xl" overflow="hidden">
+        <Box mt={10} pb={10} textAlign={"center"} borderRadius="xl" overflow="hidden">
             <Image
               unoptimized
               src="/cotw.png"
