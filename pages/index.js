@@ -46,7 +46,7 @@ export default function Index({ allPosts }) {
               src="/cotw.png"
               alt="Catch of the Week"
               layout="responsive"
-              height="400"
+              height="600"
               width="1200"
             />
         </Box>
