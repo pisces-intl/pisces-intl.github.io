@@ -42,6 +42,7 @@ export default function Index({ allPosts }) {
         <Link href="/cotw" passHref>
         <Box mt={10} textAlign={"center"} borderRadius="xl" overflow="hidden">
             <Image
+              unoptimized
               src="/cotw.png"
               alt="Catch of the Week"
               layout="responsive"
