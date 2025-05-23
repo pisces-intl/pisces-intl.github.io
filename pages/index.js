@@ -48,12 +48,12 @@ export default function Index({ allPosts }) {
         <Box as="a"
           height="auto" // auto so it can adapt on mobile
           width="100vw"
-          mt={20}
+          mt={10}
           textAlign="center"
           _hover={{ cursor: 'pointer', opacity: 0.9 }}
           overflow="hidden"
           backgroundColor="black"
-          pt={10}
+          pt={8}
           px={4}
           display="flex"
           flexDirection="column"
@@ -64,11 +64,13 @@ export default function Index({ allPosts }) {
           position="relative"
           left="50%"
           transform="translateX(-50%)">
+                <Text color="white" fontSize="2xl" fontWeight="bold" mb={12}>
+                  Catch of the Week
+                </Text>
             <Image
               unoptimized
               src="/cotw_small.png"
               alt="Catch of the Week"
-              layout="responsive"
               height="200"
               width="200"
             />
