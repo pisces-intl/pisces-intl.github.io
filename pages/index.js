@@ -50,7 +50,6 @@ export default function Index({ allPosts }) {
           width="100vw"
           mt={10}
           textAlign="center"
-          _hover={{ cursor: 'pointer', opacity: 0.9 }}
           overflow="hidden"
           backgroundColor="black"
           pt={8}
@@ -59,20 +58,20 @@ export default function Index({ allPosts }) {
           flexDirection="column"
           justifyContent="space-between"
           alignItems="center"
-          background="linear-gradient(to bottom, #111, #000)"
+          background="linear-gradient(to bottom, #222, #111)"
           shadow="lg"
           position="relative"
           left="50%"
           transform="translateX(-50%)">
-                <Text color="white" fontSize="2xl" fontWeight="bold" mb={12}>
+                <Text color="white" fontSize="2xl" fontWeight="bold" mb={10}>
                   Catch of the Week
                 </Text>
             <Image
               unoptimized
               src="/cotw_small.png"
               alt="Catch of the Week"
-              height="200"
-              width="200"
+              height="300"
+              width="300"
             />
         </Box>
         </Link>
@@ -87,7 +86,7 @@ export default function Index({ allPosts }) {
           }
         </SimpleGrid>
         <Link href="/cotw" passHref>
-          <Box opacity={1} height="700px" width="100vw" mt={20} textAlign={"center"} _hover={{ opacity: 1, cursor: 'pointer' }} overflow="hidden" backgroundColor={'black'} pt={10} px={4} display="flex" flexDirection="column" justifyContent="space-between" alignItems="center" background="linear-gradient(to bottom, #111, #000)" shadow="lg" position="relative" left="50%" transform="translateX(-50%)">
+          <Box opacity={1} height="700px" width="100vw" mt={20} textAlign={"center"} _hover={{ opacity: 1, cursor: 'pointer' }} overflow="hidden" backgroundColor={'black'} pt={10} px={4} display="flex" flexDirection="column" justifyContent="space-between" alignItems="center" background="linear-gradient(to bottom, #222, #111)" shadow="lg" position="relative" left="50%" transform="translateX(-50%)">
             <Text color="white" fontSize="80px" fontWeight="bold" pt={0}>
                 Catch of the Week
             </Text>
