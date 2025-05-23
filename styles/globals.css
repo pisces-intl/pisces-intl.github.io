@@ -34,6 +34,7 @@ div::-webkit-scrollbar-thumb {
 body,
 .table-of-contents {
 	overflow: overlay;
+	overflow-x: hidden;
 }
 
 /* Org Photos */

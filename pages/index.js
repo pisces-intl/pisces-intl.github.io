@@ -18,8 +18,13 @@ export default function Index({ allPosts }) {
   const [isMobile, setIsMobile] = React.useState(false)
 
   React.useEffect(() => {
-    setIsMobile((window.innerWidth < 890) || (window.innerHeight < 910))
-  }, [])
+  function handleResize() {
+    setIsMobile(window.innerWidth < 890 || window.innerHeight < 910);
+  }
+  handleResize(); // set initial value
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
 
   return (
     <Layout title='PISCES'>
@@ -40,14 +45,32 @@ export default function Index({ allPosts }) {
           }
         </VStack>
         <Link href="/cotw" passHref>
-        <Box mt={10} pb={10} textAlign={"center"} borderRadius="xl" overflow="hidden">
+        <Box as="a"
+          height="auto" // auto so it can adapt on mobile
+          width="100vw"
+          mt={20}
+          textAlign="center"
+          _hover={{ cursor: 'pointer', opacity: 0.9 }}
+          overflow="hidden"
+          backgroundColor="black"
+          pt={10}
+          px={4}
+          display="flex"
+          flexDirection="column"
+          justifyContent="space-between"
+          alignItems="center"
+          background="linear-gradient(to bottom, #111, #000)"
+          shadow="lg"
+          position="relative"
+          left="50%"
+          transform="translateX(-50%)">
             <Image
               unoptimized
-              src="/cotw.png"
+              src="/cotw_small.png"
               alt="Catch of the Week"
               layout="responsive"
-              height="600"
-              width="1200"
+              height="200"
+              width="200"
             />
         </Box>
         </Link>
@@ -62,14 +85,17 @@ export default function Index({ allPosts }) {
           }
         </SimpleGrid>
         <Link href="/cotw" passHref>
-        <Box opacity={0.8} mt={10} pb={5} textAlign={"center"} _hover={{ opacity: 1, cursor: 'pointer' }} borderRadius="xl" overflow="hidden">
+          <Box opacity={1} height="700px" width="100vw" mt={20} textAlign={"center"} _hover={{ opacity: 1, cursor: 'pointer' }} overflow="hidden" backgroundColor={'black'} pt={10} px={4} display="flex" flexDirection="column" justifyContent="space-between" alignItems="center" background="linear-gradient(to bottom, #111, #000)" shadow="lg" position="relative" left="50%" transform="translateX(-50%)">
+            <Text color="white" fontSize="80px" fontWeight="bold" pt={0}>
+                Catch of the Week
+            </Text>
             <Image
-              src="/cotw.png"
+              src="/cotw_small.png"
               alt="Catch of the Week"
-              height="400"
-              width="1200"
+              height="500"
+              width="500"
             />
-        </Box>
+          </Box>
         </Link>
         </>
       }
