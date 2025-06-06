@@ -5,9 +5,10 @@ import {
   Heading,
   Button,
   VStack,
-  Text
+  Text,
+  Flex
 } from '@chakra-ui/react';
-import { ArrowForwardIcon } from '@chakra-ui/icons';
+import { ArrowForwardIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 import NewsCard from '../components/NewsCard';
 import { getAllPosts } from '../lib/api';
@@ -45,27 +46,37 @@ export default function Index({ allPosts }) {
           }
         </VStack>
         <Link href="/cotm" passHref>
-        <Box as="a"
-          height="auto" // auto so it can adapt on mobile
-          width="100vw"
-          mt={10}
-          textAlign="center"
-          overflow="hidden"
-          backgroundColor="black"
-          pt={8}
-          px={4}
-          display="flex"
-          flexDirection="column"
-          justifyContent="space-between"
-          alignItems="center"
-          background="linear-gradient(to bottom, #222, #111)"
-          shadow="lg"
-          position="relative"
-          left="50%"
-          transform="translateX(-50%)">
-                <Text color="white" fontSize="2xl" fontWeight="bold" mb={10}>
-                  Catch of the Month
-                </Text>
+          <Box as="a"
+            height="auto"
+            maxW="100vw"
+            mt={10}
+            textAlign="center"
+            overflow="hidden"
+            backgroundColor="black"
+            pt={8}
+            px={{ base: 4, sm: 8 }}
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+            background="linear-gradient(to bottom, #222, #111)"
+            shadow="lg"
+            position="relative"
+            left="50%"
+            transform="translateX(-50%)"
+            cursor="pointer"
+            transition="all 0.3s ease-in-out"
+            _hover={{
+              transform: 'scale(1.02)',
+              boxShadow: '0 0 15px rgba(255, 255, 255, 0.1)',
+            }}
+            _focusVisible={{
+              outline: '2px solid white',
+            }}
+          >
+            <Text color="white" fontSize="2xl" fontWeight="bold" mb={6}>
+              Catch of the Month
+            </Text>
             <Image
               unoptimized
               src="/cotm_small.png"
@@ -73,7 +84,10 @@ export default function Index({ allPosts }) {
               height="300"
               width="300"
             />
-        </Box>
+            <Text mt={6} color="gray.300" fontSize="md" maxW="90vw" px={4}>
+              This is where we will anonymize and report a significant reported event in the preceding month, as an example of the types of findings that the student analysts have identified, and the oversight analysts have verified and reported.
+            </Text>
+          </Box>
         </Link>
         </>
         :
@@ -86,16 +100,30 @@ export default function Index({ allPosts }) {
           }
         </SimpleGrid>
         <Link href="/cotm" passHref>
-          <Box opacity={1} height="700px" width="100vw" mt={20} textAlign={"center"} _hover={{ opacity: 1, cursor: 'pointer' }} overflow="hidden" backgroundColor={'black'} pt={10} px={4} display="flex" flexDirection="column" justifyContent="space-between" alignItems="center" background="linear-gradient(to bottom, #222, #111)" shadow="lg" position="relative" left="50%" transform="translateX(-50%)">
-            <Text color="white" fontSize="80px" fontWeight="bold" pt={0}>
-                Catch of the Month
+          <Box opacity={1} height="700px" width="100vw" mt={20} textAlign="left" _hover={{ opacity: 1, cursor: 'pointer' }} overflow="hidden" backgroundColor={'black'} pt={10} px={4} background="linear-gradient(to bottom, #222, #111)" shadow="lg" position="relative" left="50%" transform="translateX(-50%)">
+            <Text color="white" fontSize="60px" fontWeight="bold" pt={0} textAlign="center" transition="all 0.3s ease-in-out"
+                _hover={{
+                transform: 'scale(1.02)',
+                boxShadow: '0 0 20px rgba(255, 255, 255, 0.1)',
+              }}>
+                Catch of the Month<ChevronRightIcon boxSize={20} />
             </Text>
+            <Flex
+              direction={{ base: 'column', md: 'row' }}
+              justify="center"
+              align="center"
+              gap={40}
+            >
             <Image
               src="/cotm_small.png"
               alt="Catch of the Month"
               height="500"
               width="500"
             />
+            <Text flex="1" color="gray.200" fontSize="30px" maxW="600px">
+             This is where we will anonymize and report a significant reported event in the preceding month, as an example of the types of findings that the student analysts have identified, and the oversight analysts have verified and reported.
+            </Text>
+            </Flex>
           </Box>
         </Link>
         </>
