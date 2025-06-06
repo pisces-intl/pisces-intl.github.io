@@ -65,7 +65,6 @@ export default function Index({ allPosts }) {
             shadow="lg"
             position="relative"
             left="50%"
-            transform="translateX(-50%)"
             cursor="pointer"
           >
             <Text color="white" fontSize="2xl" fontWeight="bold" mb={6}>
@@ -78,7 +77,7 @@ export default function Index({ allPosts }) {
               height="300"
               width="300"
             />
-            <Text mt={6} color="gray.300" fontSize="md" maxW="90vw" px={4}>
+            <Text mt={6} color="gray.300" fontSize="md" maxW="90vw" px={4} mb={10}>
               This is where we will anonymize and report a significant reported event in the preceding month, as an example of the types of findings that the student analysts have identified, and the oversight analysts have verified and reported.
             </Text>
           </Box>
