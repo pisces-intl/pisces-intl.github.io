@@ -63,8 +63,6 @@ export default function Index({ allPosts }) {
             alignItems="center"
             background="linear-gradient(to bottom, #222, #111)"
             shadow="lg"
-            position="relative"
-            left="50%"
             cursor="pointer"
           >
             <Text color="white" fontSize="2xl" fontWeight="bold" mb={6}>
