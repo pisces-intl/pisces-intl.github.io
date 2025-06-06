@@ -54,6 +54,8 @@ export default function Index({ allPosts }) {
             overflow="hidden"
             backgroundColor="black"
             pt={8}
+            pb={12}
+            mb={6}
             px={{ base: 4, sm: 8 }}
             display="flex"
             flexDirection="column"
@@ -65,14 +67,6 @@ export default function Index({ allPosts }) {
             left="50%"
             transform="translateX(-50%)"
             cursor="pointer"
-            transition="all 0.3s ease-in-out"
-            _hover={{
-              transform: 'scale(1.02)',
-              boxShadow: '0 0 15px rgba(255, 255, 255, 0.1)',
-            }}
-            _focusVisible={{
-              outline: '2px solid white',
-            }}
           >
             <Text color="white" fontSize="2xl" fontWeight="bold" mb={6}>
               Catch of the Month
